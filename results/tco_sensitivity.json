@@ -1,0 +1,184 @@
+{
+ "tariff": [
+  {
+   "tariff": 4.85,
+   "scenario": "marginal_workstation",
+   "api": "GigaChat Lite",
+   "c_var_rub": 0.0008780117158873315,
+   "c_fixed_rub_month": 512.4415816993463,
+   "breakeven": 13442.152541474503
+  },
+  {
+   "tariff": 4.85,
+   "scenario": "marginal_workstation",
+   "api": "YandexGPT Pro 5.1",
+   "c_var_rub": 0.0008780117158873315,
+   "c_fixed_rub_month": 512.4415816993463,
+   "breakeven": 1069.5430270995528
+  },
+  {
+   "tariff": 4.85,
+   "scenario": "dedicated_24x7",
+   "api": "GigaChat Lite",
+   "c_var_rub": 0.0006252515336435355,
+   "c_fixed_rub_month": 739.1134640522876,
+   "breakeven": 19260.411952935036
+  },
+  {
+   "tariff": 4.85,
+   "scenario": "dedicated_24x7",
+   "api": "YandexGPT Pro 5.1",
+   "c_var_rub": 0.0006252515336435355,
+   "c_fixed_rub_month": 739.1134640522876,
+   "breakeven": 1541.8281134267131
+  },
+  {
+   "tariff": 8.0,
+   "scenario": "marginal_workstation",
+   "api": "GigaChat Lite",
+   "c_var_rub": 0.0014482667478553921,
+   "c_fixed_rub_month": 524.8340522875817,
+   "breakeven": 13976.293684329685
+  },
+  {
+   "tariff": 8.0,
+   "scenario": "marginal_workstation",
+   "api": "YandexGPT Pro 5.1",
+   "c_var_rub": 0.0014482667478553921,
+   "c_fixed_rub_month": 524.8340522875817,
+   "breakeven": 1096.713303535464
+  },
+  {
+   "tariff": 8.0,
+   "scenario": "dedicated_24x7",
+   "api": "GigaChat Lite",
+   "c_var_rub": 0.0010313427359068628,
+   "c_fixed_rub_month": 898.7258169934642,
+   "breakeven": 23670.20278706002
+  },
+  {
+   "tariff": 8.0,
+   "scenario": "dedicated_24x7",
+   "api": "YandexGPT Pro 5.1",
+   "c_var_rub": 0.0010313427359068628,
+   "c_fixed_rub_month": 898.7258169934642,
+   "breakeven": 1876.3770934972179
+  },
+  {
+   "tariff": 8.9,
+   "scenario": "marginal_workstation",
+   "api": "GigaChat Lite",
+   "c_var_rub": 0.0016111967569891238,
+   "c_fixed_rub_month": 528.3747581699346,
+   "breakeven": 14131.898117619055
+  },
+  {
+   "tariff": 8.9,
+   "scenario": "marginal_workstation",
+   "api": "YandexGPT Pro 5.1",
+   "c_var_rub": 0.0016111967569891238,
+   "c_fixed_rub_month": 528.3747581699346,
+   "breakeven": 1104.48813723914
+  },
+  {
+   "tariff": 8.9,
+   "scenario": "dedicated_24x7",
+   "api": "GigaChat Lite",
+   "c_var_rub": 0.0011473687936963848,
+   "c_fixed_rub_month": 944.3293464052288,
+   "breakeven": 24947.52191091987
+  },
+  {
+   "tariff": 8.9,
+   "scenario": "dedicated_24x7",
+   "api": "YandexGPT Pro 5.1",
+   "c_var_rub": 0.0011473687936963848,
+   "c_fixed_rub_month": 944.3293464052288,
+   "breakeven": 1972.0667379989486
+  }
+ ],
+ "lifetime": [
+  {
+   "months": 24,
+   "c_fixed_rub_month": 775.0553137254901,
+   "breakeven_gigachat_lite": 20729.610110491354
+  },
+  {
+   "months": 36,
+   "c_fixed_rub_month": 528.3747581699346,
+   "breakeven_gigachat_lite": 14131.898117619055
+  },
+  {
+   "months": 60,
+   "c_fixed_rub_month": 331.0303137254902,
+   "breakeven_gigachat_lite": 8853.728523321217
+  }
+ ],
+ "tokenizer": [
+  {
+   "api": "GigaChat Lite",
+   "k": 0.6,
+   "breakeven": 24249.82924839709
+  },
+  {
+   "api": "GigaChat Lite",
+   "k": 0.8,
+   "breakeven": 17857.253428955126
+  },
+  {
+   "api": "GigaChat Lite",
+   "k": 1.0,
+   "breakeven": 14131.898117619055
+  },
+  {
+   "api": "YandexGPT Lite",
+   "k": 0.6,
+   "breakeven": 7506.517142304143
+  },
+  {
+   "api": "YandexGPT Lite",
+   "k": 0.8,
+   "breakeven": 5597.854194735313
+  },
+  {
+   "api": "YandexGPT Lite",
+   "k": 1.0,
+   "breakeven": 4463.046704555039
+  },
+  {
+   "api": "GigaChat Pro",
+   "k": 0.6,
+   "breakeven": 2961.9278147752016
+  },
+  {
+   "api": "GigaChat Pro",
+   "k": 0.8,
+   "breakeven": 2216.441170818393
+  },
+  {
+   "api": "GigaChat Pro",
+   "k": 1.0,
+   "breakeven": 1770.7593328816056
+  },
+  {
+   "api": "YandexGPT Pro 5.1",
+   "k": 0.6,
+   "breakeven": 1844.9560603861676
+  },
+  {
+   "api": "YandexGPT Pro 5.1",
+   "k": 0.8,
+   "breakeven": 1381.773612848566
+  },
+  {
+   "api": "YandexGPT Pro 5.1",
+   "k": 1.0,
+   "breakeven": 1104.48813723914
+  }
+ ],
+ "chat_request": {
+  "energy_total_j": 889.3667233455882,
+  "energy_gpu_j": 543.33046875,
+  "t_req_s": 10.631562304687499
+ }
+}

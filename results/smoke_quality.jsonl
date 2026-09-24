@@ -1,0 +1,2 @@
+{"model": "qwen3.5-2b", "quant": "Q4_K_M", "lang": "ru", "metric": "mmlu", "seconds": 166.8, "n": 60, "accuracy": 0.5, "no_letter": 0}
+{"model": "qwen3.5-2b", "quant": "Q4_K_M", "lang": "en", "metric": "mmlu", "seconds": 148.5, "n": 60, "accuracy": 0.6333333333333333, "no_letter": 0}

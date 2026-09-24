@@ -1,0 +1,39 @@
+{
+  "_note": "All prices accessed 2026-09-23 unless stated. Ruble prices include VAT (22%). Sources in lit/notes.md.",
+  "workloads": {
+    "chat": {"prompt_tokens": 300, "gen_tokens": 300},
+    "rag_summary": {"prompt_tokens": 1500, "gen_tokens": 200}
+  },
+  "electricity_rub_per_kwh": {
+    "value": 8.90,
+    "sensitivity": [4.85, 8.00, 8.90],
+    "source": "Order DPR-TR-407/25 (Moscow), App. 1, row 1 single-rate, from 01.10.2026; night two-zone 4.85; before 01.10.2026 8.00",
+    "url": "https://www.mos.ru/upload/documents/docs/5117/Prikazot24122025_DPR-TR-407_25-ghvb1.pdf"
+  },
+  "hardware": {
+    "gpu_price_rub": {"value": 17761, "source": "KNS retailer, CBR GTX 1650 4Gb, new, 2026-09-23",
+                       "url": "https://www.kns.ru/catalog/komplektuyuschie/videokarty/_graficheskij-protsessor_nvidia-geforce-gtx-1650/"},
+    "lifetime_months": 36
+  },
+  "usd_rub": {"value": 84.0657, "source": "Bank of Russia official rate for 23.09.2026",
+              "url": "https://www.cbr.ru/scripts/XML_daily.asp?date_req=23/09/2026"},
+  "scenarios": {
+    "marginal_workstation": {"_desc": "GPU added to a PC that is on anyway during working hours; only the GPU standby and the incremental host load are charged",
+                             "platform_active_w": 20, "standby_w": 19, "hours_on_per_month": 176, "psu_efficiency": 0.85},
+    "dedicated_24x7": {"_desc": "the whole PC runs as an always-on inference box",
+                       "platform_active_w": 45, "standby_w": 59, "hours_on_per_month": 730, "psu_efficiency": 0.85}
+  },
+  "apis": [
+    {"name": "GigaChat Lite", "rub_per_1k_in": 0.065, "rub_per_1k_out": 0.065,
+     "url": "https://developers.sber.ru/docs/ru/gigachat/tariffs/legal-tariffs"},
+    {"name": "GigaChat Pro", "rub_per_1k_in": 0.5, "rub_per_1k_out": 0.5,
+     "url": "https://developers.sber.ru/docs/ru/gigachat/tariffs/legal-tariffs"},
+    {"name": "YandexGPT Lite", "rub_per_1k_in": 0.2, "rub_per_1k_out": 0.2,
+     "url": "https://aistudio.yandex.ru/docs/ru/ai-studio/pricing"},
+    {"name": "YandexGPT Pro 5.1", "rub_per_1k_in": 0.8, "rub_per_1k_out": 0.8,
+     "url": "https://aistudio.yandex.ru/docs/ru/ai-studio/pricing"},
+    {"name": "gpt-5-nano", "rub_per_1k_in": 0.0042033, "rub_per_1k_out": 0.0336263,
+     "_calc": "USD 0.05 / 0.40 per 1M x 84.0657 / 1000; net of VAT; payment from Russia may be unavailable",
+     "url": "https://developers.openai.com/api/docs/pricing"}
+  ]
+}

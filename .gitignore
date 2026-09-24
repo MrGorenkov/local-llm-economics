@@ -1,0 +1,10 @@
+# inputs are rebuilt from public datasets by code/prepare_data.py
+data/
+# manuscript text, journal forms and working notes are not published here
+paper/*
+!paper/figures/
+00_requirements.md
+lit/notes.md
+__pycache__/
+*.pyc
+*.gguf

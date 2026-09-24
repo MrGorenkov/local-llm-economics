@@ -1,0 +1,566 @@
+[{"stream_name":"stdout","time":5.420521734,"data":"[      5s] $ git clone --depth 1 --branch b11136 https://github.com/ggml-org/llama.cpp /tmp/job/llama.cpp[      5s] $ curl -sL --retry 5 -o /tmp/job/src/qwen3.5-0.8b-bf16.gguf https://huggingface.co/bartowski/Qwen_Qwen3.5-0.8B-GGUF/resolve/main/Qwen_Qwen3.5-0.8B-bf16.gguf\n"}
+,{"stream_name":"stdout","time":5.420616588,"data":"\n"}
+,{"stream_name":"stderr","time":5.439356568,"data":"Cloning into '/tmp/job/llama.cpp'...\n"}
+,{"stream_name":"stderr","time":9.727512097,"data":"Note: switching to '057494f93f859308297cf8d21eee88e3fa17603c'.\n"}
+,{"stream_name":"stderr","time":9.727539004,"data":"\n"}
+,{"stream_name":"stderr","time":9.727545228,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":9.727549744000001,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":9.727554748,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":9.727559128,"data":"\n"}
+,{"stream_name":"stderr","time":9.727563722,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":9.727568804,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":9.727573299,"data":"\n"}
+,{"stream_name":"stderr","time":9.727577428,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":9.727582245,"data":"\n"}
+,{"stream_name":"stderr","time":9.727586438,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":9.727590831,"data":"\n"}
+,{"stream_name":"stderr","time":9.727595069,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":9.727600258,"data":"\n"}
+,{"stream_name":"stderr","time":9.727605448,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":9.727610918,"data":"\n"}
+,{"stream_name":"stdout","time":10.642231546,"data":"[     10s] libcuda: /usr/local/nvidia/lib64/libcuda.so\n"}
+,{"stream_name":"stdout","time":10.64237187,"data":"[     10s] $ cmake -S /tmp/job/llama.cpp -B /tmp/job/build -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=75 -DCMAKE_BUILD_TYPE=Release -DLLAMA_CURL=OFF -DLLAMA_OPENSSL=OFF -DCUDA_cuda_driver_LIBRARY=/usr/local/nvidia/lib64/libcuda.so\n"}
+,{"stream_name":"stdout","time":11.202986904,"data":"-- The C compiler identification is GNU 11.4.0\n"}
+,{"stream_name":"stdout","time":11.439403623,"data":"-- The CXX compiler identification is GNU 11.4.0\n"}
+,{"stream_name":"stdout","time":11.460362646,"data":"-- Detecting C compiler ABI info\n"}
+,{"stream_name":"stdout","time":11.570640674,"data":"-- Detecting C compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":11.595169521,"data":"-- Check for working C compiler: /usr/bin/cc - skipped\n"}
+,{"stream_name":"stdout","time":11.596100031,"data":"-- Detecting C compile features\n"}
+,{"stream_name":"stdout","time":11.597236822,"data":"-- Detecting C compile features - done\n"}
+,{"stream_name":"stdout","time":11.622248599,"data":"-- Detecting CXX compiler ABI info\n"}
+,{"stream_name":"stdout","time":11.717858871,"data":"-- Detecting CXX compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":11.742408867,"data":"-- Check for working CXX compiler: /usr/bin/c++ - skipped\n"}
+,{"stream_name":"stdout","time":11.743037364,"data":"-- Detecting CXX compile features\n"}
+,{"stream_name":"stdout","time":11.744331998,"data":"-- Detecting CXX compile features - done\n"}
+,{"stream_name":"stdout","time":11.75644393,"data":"-- llama.cpp version: 0.4.1-dev\n"}
+,{"stream_name":"stderr","time":11.756507227,"data":"CMAKE_BUILD_TYPE=Release\n"}
+,{"stream_name":"stdout","time":11.762671382,"data":"-- Found Git: /usr/bin/git (found version \"2.34.1\")\n"}
+,{"stream_name":"stdout","time":11.793442581,"data":"-- The ASM compiler identification is GNU\n"}
+,{"stream_name":"stdout","time":11.797241772,"data":"-- Found assembler: /usr/bin/cc\n"}
+,{"stream_name":"stdout","time":11.818579125,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n"}
+,{"stream_name":"stdout","time":11.919503183,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n"}
+,{"stream_name":"stdout","time":11.921145243,"data":"-- Found Threads: TRUE\n"}
+,{"stream_name":"stdout","time":11.930824866,"data":"-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF\n"}
+,{"stream_name":"stdout","time":11.953898993,"data":"-- CMAKE_SYSTEM_PROCESSOR: x86_64\n"}
+,{"stream_name":"stdout","time":11.954791136,"data":"-- GGML_SYSTEM_ARCH: x86\n"}
+,{"stream_name":"stdout","time":12.272449491,"data":"-- Found OpenMP_C: -fopenmp (found version \"4.5\")\n"}
+,{"stream_name":"stdout","time":12.386403255,"data":"-- Found OpenMP_CXX: -fopenmp (found version \"4.5\")\n"}
+,{"stream_name":"stdout","time":12.386974288,"data":"-- Found OpenMP: TRUE (found version \"4.5\")\n"}
+,{"stream_name":"stdout","time":12.389405977,"data":"-- Including CPU backend\n"}
+,{"stream_name":"stdout","time":12.390057873,"data":"-- x86 detected\n"}
+,{"stream_name":"stdout","time":12.390161954,"data":"-- Adding CPU backend variant ggml-cpu: -march=native \n"}
+,{"stream_name":"stdout","time":12.431964319,"data":"-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include (found version \"12.8.93\")\n"}
+,{"stream_name":"stdout","time":12.50866783,"data":"-- CUDA Toolkit found\n"}
+,{"stream_name":"stdout","time":14.31923623,"data":"-- The CUDA compiler identification is NVIDIA 12.8.93 with host compiler GNU 11.4.0\n"}
+,{"stream_name":"stdout","time":14.336903165,"data":"-- Detecting CUDA compiler ABI info\n"}
+,{"stream_name":"stdout","time":15.504786806,"data":"-- Detecting CUDA compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":15.575369571,"data":"-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped\n"}
+,{"stream_name":"stdout","time":15.942972045,"data":"-- Detecting CUDA compile features\n"}
+,{"stream_name":"stdout","time":15.943716607,"data":"-- Detecting CUDA compile features - done\n"}
+,{"stream_name":"stdout","time":15.955503051,"data":"-- Using CMAKE_CUDA_ARCHITECTURES=75 CMAKE_CUDA_ARCHITECTURES_NATIVE=75-real\n"}
+,{"stream_name":"stdout","time":15.957305404,"data":"-- FlashAttention K-V type combinations: f16-f16;q4_0-q4_0;q8_0-q8_0;bf16-bf16\n"}
+,{"stream_name":"stdout","time":15.963664897,"data":"-- Found NCCL: /usr/lib/x86_64-linux-gnu/libnccl.so\n"}
+,{"stream_name":"stdout","time":16.008791195,"data":"-- CUDA host compiler is GNU 11.4.0\n"}
+,{"stream_name":"stdout","time":16.009291419,"data":"-- Including CUDA backend\n"}
+,{"stream_name":"stdout","time":16.019944635,"data":"-- ggml version: 0.25.0\n"}
+,{"stream_name":"stdout","time":16.019963974,"data":"-- ggml commit:  057494f\n"}
+,{"stream_name":"stdout","time":16.092320066,"data":"-- Generating embedded license file for target: llama-app\n"}
+,{"stream_name":"stdout","time":16.102638606,"data":"-- Configuring done (5.2s)\n"}
+,{"stream_name":"stdout","time":16.639653425,"data":"-- Generating done (0.5s)\n"}
+,{"stream_name":"stdout","time":16.640619055,"data":"-- Build files have been written to: /tmp/job/build\n"}
+,{"stream_name":"stdout","time":16.657233498,"data":"[     16s] $ cmake --build /tmp/job/build -j 4 --target llama-server llama-perplexity llama-quantize llama-bench\n"}
+,{"stream_name":"stdout","time":16.906082337,"data":"[  0%] Building CXX object vendor/hash/CMakeFiles/vendor-hash.dir/hash.cpp.o\n"}
+,{"stream_name":"stdout","time":16.907553527,"data":"[  0%] Building CXX object vendor/cpp-httplib/CMakeFiles/cpp-httplib.dir/httplib.cpp.o\n"}
+,{"stream_name":"stdout","time":16.911461536,"data":"[  1%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o\n"}
+,{"stream_name":"stdout","time":16.916900741,"data":"[  3%] Building CXX object common/CMakeFiles/llama-common-base.dir/build-info.cpp.o\n"}
+,{"stream_name":"stdout","time":17.302583821,"data":"[  3%] Building C object vendor/hash/CMakeFiles/vendor-hash.dir/xxhash/xxhash.c.o\n"}
+,{"stream_name":"stdout","time":17.356010238,"data":"[  3%] Linking CXX static library libllama-common-base.a\n"}
+,{"stream_name":"stdout","time":17.386842362,"data":"[  3%] Built target llama-common-base\n"}
+,{"stream_name":"stdout","time":17.392701002,"data":"[  3%] Building CXX object vendor/hash/CMakeFiles/vendor-hash.dir/sha1/sha1.c.o\n"}
+,{"stream_name":"stdout","time":17.809739172,"data":"[  3%] Building C object vendor/hash/CMakeFiles/vendor-hash.dir/sha256/sha256.c.o\n"}
+,{"stream_name":"stdout","time":18.236978613,"data":"[  3%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.o\n"}
+,{"stream_name":"stdout","time":18.691438235,"data":"[  4%] Provisioning UI assets\n"}
+,{"stream_name":"stdout","time":18.699150101,"data":"-- UI: downloading from b1: https://huggingface.co/buckets/ggml-org/llama-ui/resolve/b1/dist.tar.gz\n"}
+,{"stream_name":"stdout","time":18.791590432,"data":"-- UI: download dist.tar.gz.sha256 from b1 failed: \"HTTP response code said error\"\n"}
+,{"stream_name":"stdout","time":18.794136233,"data":"-- UI: downloading from latest: https://huggingface.co/buckets/ggml-org/llama-ui/resolve/latest/dist.tar.gz\n"}
+,{"stream_name":"stdout","time":19.335237718,"data":"[  6%] Linking CXX static library libvendor-hash.a\n"}
+,{"stream_name":"stdout","time":19.365459357,"data":"[  6%] Built target vendor-hash\n"}
+,{"stream_name":"stdout","time":19.37121998,"data":"[  6%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o\n"}
+,{"stream_name":"stdout","time":19.81221506,"data":"-- UI: archive verified and extracted\n"}
+,{"stream_name":"stdout","time":19.812593548,"data":"-- UI: HF download succeeded, stamp updated (ggml-org/llama-ui|b1, resolved: latest)\n"}
+,{"stream_name":"stdout","time":20.30746612,"data":"[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o\n"}
+,{"stream_name":"stdout","time":20.545265714,"data":"-- UI: gzip compression applied (/tmp/job/build/tools/ui/ui-gzip/_gzip)\n"}
+,{"stream_name":"stdout","time":20.918556273,"data":"[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.o\n"}
+,{"stream_name":"stdout","time":23.4083419,"data":"[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o\n"}
+,{"stream_name":"stdout","time":24.140233397,"data":"[     23s] downloaded qwen3.5-0.8b-bf16.gguf: 1.45 GiB\n"}
+,{"stream_name":"stdout","time":24.140541927,"data":"[     23s] $ curl -sL --retry 5 -o /tmp/job/src/qwen3.5-2b-bf16.gguf https://huggingface.co/bartowski/Qwen_Qwen3.5-2B-GGUF/resolve/main/Qwen_Qwen3.5-2B-bf16.gguf\n"}
+,{"stream_name":"stdout","time":25.647170989,"data":"[  7%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o\n"}
+,{"stream_name":"stdout","time":26.134249049,"data":"[  7%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o\n"}
+,{"stream_name":"stdout","time":29.238020683,"data":"[  7%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.o\n"}
+,{"stream_name":"stdout","time":32.915073142,"data":"-- UI: embedded 70 assets\n"}
+,{"stream_name":"stdout","time":32.929203067,"data":"[  7%] Built target llama-ui-assets\n"}
+,{"stream_name":"stdout","time":32.946242484,"data":"[  7%] Building CXX object tools/ui/CMakeFiles/llama-ui.dir/ui.cpp.o\n"}
+,{"stream_name":"stdout","time":38.174787144,"data":"[  7%] Linking CXX shared library ../../bin/libggml-base.so\n"}
+,{"stream_name":"stdout","time":38.294625168,"data":"[  7%] Built target ggml-base\n"}
+,{"stream_name":"stdout","time":38.313735682,"data":"[  7%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o\n"}
+,{"stream_name":"stdout","time":38.32798345,"data":"[  7%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/acc.cu.o\n"}
+,{"stream_name":"stdout","time":40.649048143,"data":"[  9%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o\n"}
+,{"stream_name":"stdout","time":42.727424425,"data":"[  9%] Linking CXX static library libllama-ui.a\n"}
+,{"stream_name":"stdout","time":42.841871031,"data":"[  9%] Built target llama-ui\n"}
+,{"stream_name":"stdout","time":42.855437267,"data":"[  9%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o\n"}
+,{"stream_name":"stdout","time":43.27078522,"data":"[ 11%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/add-id.cu.o\n"}
+,{"stream_name":"stdout","time":46.914264581,"data":"[ 11%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/allreduce.cu.o\n"}
+,{"stream_name":"stdout","time":51.934193989,"data":"[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/iqp.cpp.o\n"}
+,{"stream_name":"stdout","time":54.575159675,"data":"[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o\n"}
+,{"stream_name":"stdout","time":54.608882106,"data":"[ 11%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o\n"}
+,{"stream_name":"stdout","time":57.098707684,"data":"[ 11%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/arange.cu.o\n"}
+,{"stream_name":"stdout","time":57.218016651,"data":"[ 11%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/argmax.cu.o\n"}
+,{"stream_name":"stdout","time":57.55822729,"data":"[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o\n"}
+,{"stream_name":"stdout","time":58.579483246,"data":"[ 12%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o\n"}
+,{"stream_name":"stdout","time":58.737635554,"data":"[ 12%] Linking CXX static library libcpp-httplib.a\n"}
+,{"stream_name":"stdout","time":58.823350638,"data":"[ 12%] Built target cpp-httplib\n"}
+,{"stream_name":"stdout","time":58.829454057,"data":"[ 12%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o\n"}
+,{"stream_name":"stdout","time":61.745140877,"data":"[ 12%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o\n"}
+,{"stream_name":"stdout","time":61.747435406,"data":"[ 12%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/argsort.cu.o\n"}
+,{"stream_name":"stdout","time":64.85370989,"data":"[ 12%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/binbcast.cu.o\n"}
+,{"stream_name":"stdout","time":66.428887955,"data":"[ 12%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o\n"}
+,{"stream_name":"stdout","time":66.754576663,"data":"[ 12%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o\n"}
+,{"stream_name":"stdout","time":67.999350117,"data":"[ 14%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/clamp.cu.o\n"}
+,{"stream_name":"stdout","time":72.911588998,"data":"[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o\n"}
+,{"stream_name":"stdout","time":76.555020825,"data":"[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/llamafile/sgemm.cpp.o\n"}
+,{"stream_name":"stdout","time":84.386059412,"data":"[     84s] downloaded qwen3.5-2b-bf16.gguf: 3.63 GiB\n"}
+,{"stream_name":"stdout","time":84.386836978,"data":"[     84s] $ curl -sL --retry 5 -o /tmp/job/src/qwen3.5-4b-bf16.gguf https://huggingface.co/bartowski/Qwen_Qwen3.5-4B-GGUF/resolve/main/Qwen_Qwen3.5-4B-bf16.gguf\n"}
+,{"stream_name":"stdout","time":88.289663165,"data":"[ 15%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o\n"}
+,{"stream_name":"stdout","time":90.869007833,"data":"[ 15%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/col2im-1d.cu.o\n"}
+,{"stream_name":"stdout","time":90.869038864,"data":"[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.o\n"}
+,{"stream_name":"stdout","time":98.42055545,"data":"[ 15%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/concat.cu.o\n"}
+,{"stream_name":"stdout","time":100.336559302,"data":"[ 15%] Linking CXX shared library ../../bin/libggml-cpu.so\n"}
+,{"stream_name":"stdout","time":100.509399702,"data":"[ 15%] Built target ggml-cpu\n"}
+,{"stream_name":"stdout","time":100.515628662,"data":"[ 15%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv-transpose-1d.cu.o\n"}
+,{"stream_name":"stdout","time":107.614023622,"data":"[ 15%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d-dw.cu.o\n"}
+,{"stream_name":"stdout","time":108.936333359,"data":"[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d-transpose.cu.o\n"}
+,{"stream_name":"stdout","time":114.916777779,"data":"[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d.cu.o\n"}
+,{"stream_name":"stdout","time":116.055738427,"data":"[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/convert.cu.o\n"}
+,{"stream_name":"stdout","time":119.667256664,"data":"[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/count-equal.cu.o\n"}
+,{"stream_name":"stdout","time":126.153692455,"data":"[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cpy.cu.o\n"}
+,{"stream_name":"stdout","time":126.853549109,"data":"[ 17%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cross-entropy-loss.cu.o\n"}
+,{"stream_name":"stdout","time":129.527776496,"data":"[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cumsum.cu.o\n"}
+,{"stream_name":"stdout","time":134.500451367,"data":"[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/diag.cu.o\n"}
+,{"stream_name":"stdout","time":139.048749382,"data":"[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/diagmask.cu.o\n"}
+,{"stream_name":"stdout","time":141.777127972,"data":"[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/dsv4-hc.cu.o\n"}
+,{"stream_name":"stdout","time":145.914735638,"data":"[ 19%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fattn-tile.cu.o\n"}
+,{"stream_name":"stdout","time":146.276740678,"data":"[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fattn.cu.o\n"}
+,{"stream_name":"stdout","time":149.225861992,"data":"[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fill.cu.o\n"}
+,{"stream_name":"stdout","time":150.618089498,"data":"[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fwht.cu.o\n"}
+,{"stream_name":"stdout","time":153.838000695,"data":"[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/gated_delta_net.cu.o\n"}
+,{"stream_name":"stdout","time":156.643316733,"data":"[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/getrows.cu.o\n"}
+,{"stream_name":"stdout","time":158.422409735,"data":"[ 20%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ggml-cuda.cu.o\n"}
+,{"stream_name":"stdout","time":163.772323812,"data":"[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/gla.cu.o\n"}
+,{"stream_name":"stdout","time":172.086511308,"data":"[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/im2col.cu.o\n"}
+,{"stream_name":"stderr","time":173.292386423,"data":"In static member function ‘static _Tp* std::__copy_move\u003c_IsMove, true, std::random_access_iterator_tag\u003e::__copy_m(const _Tp*, const _Tp*, _Tp*) [with _Tp = ggml_op; bool _IsMove = false]’,\n"}
+,{"stream_name":"stderr","time":173.29241745,"data":"    inlined from ‘_OI std::__copy_move_a2(_II, _II, _OI) [with bool _IsMove = false; _II = const ggml_op*; _OI = ggml_op*]’ at /usr/include/c++/11/bits/stl_algobase.h:494:141,\n"}
+,{"stream_name":"stderr","time":173.292424783,"data":"    inlined from ‘_OI std::__copy_move_a1(_II, _II, _OI) [with bool _IsMove = false; _II = const ggml_op*; _OI = ggml_op*]’ at /usr/include/c++/11/bits/stl_algobase.h:522:40,\n"}
+,{"stream_name":"stderr","time":173.292431307,"data":"    inlined from ‘_OI std::__copy_move_a(_II, _II, _OI) [with bool _IsMove = false; _II = const ggml_op*; _OI = ggml_op*]’ at /usr/include/c++/11/bits/stl_algobase.h:529:25,\n"}
+,{"stream_name":"stderr","time":173.292436955,"data":"    inlined from ‘_OI std::copy(_II, _II, _OI) [with _II = const ggml_op*; _OI = ggml_op*]’ at /usr/include/c++/11/bits/stl_algobase.h:619:64,\n"}
+,{"stream_name":"stderr","time":173.292443491,"data":"    inlined from ‘static _ForwardIterator std::__uninitialized_copy\u003ctrue\u003e::__uninit_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const ggml_op*; _ForwardIterator = ggml_op*]’ at /usr/include/c++/11/bits/stl_uninitialized.h:110:19,\n"}
+,{"stream_name":"stderr","time":173.292449347,"data":"    inlined from ‘_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const ggml_op*; _ForwardIterator = ggml_op*]’ at /usr/include/c++/11/bits/stl_uninitialized.h:148:131,\n"}
+,{"stream_name":"stderr","time":173.292454857,"data":"    inlined from ‘_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator\u003c_Tp\u003e\u0026) [with _InputIterator = const ggml_op*; _ForwardIterator = ggml_op*; _Tp = ggml_op]’ at /usr/include/c++/11/bits/stl_uninitialized.h:333:33,\n"}
+,{"stream_name":"stderr","time":173.292461209,"data":"    inlined from ‘void std::vector\u003c_Tp, _Alloc\u003e::_M_range_insert(std::vector\u003c_Tp, _Alloc\u003e::iterator, _ForwardIterator, _ForwardIterator, std::forward_iterator_tag) [with _ForwardIterator = const ggml_op*; _Tp = ggml_op; _Alloc = std::allocator\u003cggml_op\u003e]’ at /usr/include/c++/11/bits/vector.tcc:751:28,\n"}
+,{"stream_name":"stderr","time":173.292469339,"data":"    inlined from ‘std::vector\u003c_Tp, _Alloc\u003e::iterator std::vector\u003c_Tp, _Alloc\u003e::insert(std::vector\u003c_Tp, _Alloc\u003e::const_iterator, std::initializer_list\u003c_Tp\u003e) [with _Tp = ggml_op; _Alloc = std::allocator\u003cggml_op\u003e]’ at /usr/include/c++/11/bits/stl_vector.h:1313:16,\n"}
+,{"stream_name":"stderr","time":173.292475719,"data":"    inlined from ‘int ggml_cuda_try_fuse(ggml_backend_cuda_context*, ggml_cgraph*, int)’ at /tmp/job/llama.cpp/ggml/src/ggml-cuda/ggml-cuda.cu:3506:11:\n"}
+,{"stream_name":"stderr","time":173.292493327,"data":"/usr/include/c++/11/bits/stl_algobase.h:431:25: warning: ‘void* __builtin_memcpy(void*, const void*, long unsigned int)’ writing 20 bytes into a region of size 4 overflows the destination [-Wstringop-overflow=]\n"}
+,{"stream_name":"stderr","time":173.292497727,"data":"  431 |             __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);\n"}
+,{"stream_name":"stderr","time":173.292501821,"data":"      |             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"}
+,{"stream_name":"stderr","time":173.293206793,"data":"/usr/include/c++/11/ext/new_allocator.h: In function ‘int ggml_cuda_try_fuse(ggml_backend_cuda_context*, ggml_cgraph*, int)’:\n"}
+,{"stream_name":"stderr","time":173.293223612,"data":"/usr/include/c++/11/ext/new_allocator.h:127:49: note: at offset [24, 28] into destination object of size [24, 28] allocated by ‘operator new’\n"}
+,{"stream_name":"stderr","time":173.293228674,"data":"  127 |         return static_cast\u003c_Tp*\u003e(::operator new(__n * sizeof(_Tp)));\n"}
+,{"stream_name":"stderr","time":173.293233181,"data":"      |                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\n"}
+,{"stream_name":"stderr","time":173.293384972,"data":"/usr/include/c++/11/ext/new_allocator.h:127:49: note: at offset [20, 24] into destination object of size [20, 24] allocated by ‘operator new’\n"}
+,{"stream_name":"stderr","time":173.293393304,"data":"  127 |         return static_cast\u003c_Tp*\u003e(::operator new(__n * sizeof(_Tp)));\n"}
+,{"stream_name":"stderr","time":173.29339803,"data":"      |                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\n"}
+,{"stream_name":"stderr","time":176.15625683,"data":"In static member function ‘static _Tp* std::__copy_move\u003c_IsMove, true, std::random_access_iterator_tag\u003e::__copy_m(const _Tp*, const _Tp*, _Tp*) [with _Tp = ggml_op; bool _IsMove = false]’,\n"}
+,{"stream_name":"stderr","time":176.15629577,"data":"    inlined from ‘_OI std::__copy_move_a2(_II, _II, _OI) [with bool _IsMove = false; _II = const ggml_op*; _OI = ggml_op*]’ at /usr/include/c++/11/bits/stl_algobase.h:494:141,\n"}
+,{"stream_name":"stderr","time":176.156302,"data":"    inlined from ‘_OI std::__copy_move_a1(_II, _II, _OI) [with bool _IsMove = false; _II = const ggml_op*; _OI = ggml_op*]’ at /usr/include/c++/11/bits/stl_algobase.h:522:40,\n"}
+,{"stream_name":"stderr","time":176.156306939,"data":"    inlined from ‘_OI std::__copy_move_a(_II, _II, _OI) [with bool _IsMove = false; _II = const ggml_op*; _OI = ggml_op*]’ at /usr/include/c++/11/bits/stl_algobase.h:529:25,\n"}
+,{"stream_name":"stderr","time":176.156311616,"data":"    inlined from ‘_OI std::copy(_II, _II, _OI) [with _II = const ggml_op*; _OI = ggml_op*]’ at /usr/include/c++/11/bits/stl_algobase.h:619:64,\n"}
+,{"stream_name":"stderr","time":176.156316694,"data":"    inlined from ‘static _ForwardIterator std::__uninitialized_copy\u003ctrue\u003e::__uninit_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const ggml_op*; _ForwardIterator = ggml_op*]’ at /usr/include/c++/11/bits/stl_uninitialized.h:110:19,\n"}
+,{"stream_name":"stderr","time":176.1563217,"data":"    inlined from ‘_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const ggml_op*; _ForwardIterator = ggml_op*]’ at /usr/include/c++/11/bits/stl_uninitialized.h:148:131,\n"}
+,{"stream_name":"stderr","time":176.156326432,"data":"    inlined from ‘_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator\u003c_Tp\u003e\u0026) [with _InputIterator = const ggml_op*; _ForwardIterator = ggml_op*; _Tp = ggml_op]’ at /usr/include/c++/11/bits/stl_uninitialized.h:333:33,\n"}
+,{"stream_name":"stderr","time":176.156331301,"data":"    inlined from ‘void std::vector\u003c_Tp, _Alloc\u003e::_M_range_insert(std::vector\u003c_Tp, _Alloc\u003e::iterator, _ForwardIterator, _ForwardIterator, std::forward_iterator_tag) [with _ForwardIterator = const ggml_op*; _Tp = ggml_op; _Alloc = std::allocator\u003cggml_op\u003e]’ at /usr/include/c++/11/bits/vector.tcc:751:28,\n"}
+,{"stream_name":"stderr","time":176.156361593,"data":"    inlined from ‘std::vector\u003c_Tp, _Alloc\u003e::iterator std::vector\u003c_Tp, _Alloc\u003e::insert(std::vector\u003c_Tp, _Alloc\u003e::const_iterator, std::initializer_list\u003c_Tp\u003e) [with _Tp = ggml_op; _Alloc = std::allocator\u003cggml_op\u003e]’ at /usr/include/c++/11/bits/stl_vector.h:1313:16,\n"}
+,{"stream_name":"stderr","time":176.156368148,"data":"    inlined from ‘void ggml_backend_cuda_graph_optimize(ggml_backend_t, ggml_cgraph*, ggml_backend_graph_optimize_params*)’ at /tmp/job/llama.cpp/ggml/src/ggml-cuda/ggml-cuda.cu:4573:11:\n"}
+,{"stream_name":"stderr","time":176.156372514,"data":"/usr/include/c++/11/bits/stl_algobase.h:431:25: warning: ‘void* __builtin_memcpy(void*, const void*, long unsigned int)’ writing 20 bytes into a region of size 4 overflows the destination [-Wstringop-overflow=]\n"}
+,{"stream_name":"stderr","time":176.156377162,"data":"  431 |             __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);\n"}
+,{"stream_name":"stderr","time":176.156380958,"data":"      |             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"}
+,{"stream_name":"stderr","time":176.156558359,"data":"/usr/include/c++/11/ext/new_allocator.h: In function ‘void ggml_backend_cuda_graph_optimize(ggml_backend_t, ggml_cgraph*, ggml_backend_graph_optimize_params*)’:\n"}
+,{"stream_name":"stderr","time":176.156568718,"data":"/usr/include/c++/11/ext/new_allocator.h:127:49: note: at offset [24, 28] into destination object of size [24, 28] allocated by ‘operator new’\n"}
+,{"stream_name":"stderr","time":176.156572868,"data":"  127 |         return static_cast\u003c_Tp*\u003e(::operator new(__n * sizeof(_Tp)));\n"}
+,{"stream_name":"stderr","time":176.156576916,"data":"      |                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\n"}
+,{"stream_name":"stderr","time":176.15802102,"data":"/usr/include/c++/11/ext/new_allocator.h:127:49: note: at offset [20, 24] into destination object of size [20, 24] allocated by ‘operator new’\n"}
+,{"stream_name":"stderr","time":176.158040391,"data":"  127 |         return static_cast\u003c_Tp*\u003e(::operator new(__n * sizeof(_Tp)));\n"}
+,{"stream_name":"stderr","time":176.158045946,"data":"      |                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\n"}
+,{"stream_name":"stdout","time":177.046437451,"data":"[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/lightning-indexer.cu.o\n"}
+,{"stream_name":"stdout","time":177.426823556,"data":"[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mean.cu.o\n"}
+,{"stream_name":"stdout","time":181.044059149,"data":"[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmf.cu.o\n"}
+,{"stream_name":"stdout","time":188.841638147,"data":"[ 22%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmid.cu.o\n"}
+,{"stream_name":"stdout","time":193.593819372,"data":"[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmq.cu.o\n"}
+,{"stream_name":"stdout","time":193.73782677,"data":"[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmvf.cu.o\n"}
+,{"stream_name":"stdout","time":196.949813483,"data":"[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmvq.cu.o\n"}
+,{"stream_name":"stdout","time":198.947645637,"data":"[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/moe-weighted-reduction.cu.o\n"}
+,{"stream_name":"stdout","time":206.569377922,"data":"[ 23%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/norm.cu.o\n"}
+,{"stream_name":"stdout","time":216.777984355,"data":"[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/opt-step-adamw.cu.o\n"}
+,{"stream_name":"stdout","time":218.142685257,"data":"[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/opt-step-sgd.cu.o\n"}
+,{"stream_name":"stdout","time":224.984071639,"data":"[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/out-prod.cu.o\n"}
+,{"stream_name":"stdout","time":226.59646573,"data":"[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pad.cu.o\n"}
+,{"stream_name":"stdout","time":233.750349335,"data":"[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pad_reflect_1d.cu.o\n"}
+,{"stream_name":"stdout","time":235.016177171,"data":"[ 25%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pool1d.cu.o\n"}
+,{"stream_name":"stdout","time":242.124591238,"data":"[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pool2d.cu.o\n"}
+,{"stream_name":"stdout","time":244.505057497,"data":"[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/quantize.cu.o\n"}
+,{"stream_name":"stdout","time":250.729642436,"data":"[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/roll.cu.o\n"}
+,{"stream_name":"stdout","time":255.658026019,"data":"[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/rope.cu.o\n"}
+,{"stream_name":"stdout","time":259.213137996,"data":"[ 26%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/scale.cu.o\n"}
+,{"stream_name":"stdout","time":267.617335806,"data":"[ 28%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/set-rows.cu.o\n"}
+,{"stream_name":"stdout","time":271.626319215,"data":"[ 28%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/set.cu.o\n"}
+,{"stream_name":"stdout","time":279.708737163,"data":"[ 28%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/snake.cu.o\n"}
+,{"stream_name":"stdout","time":279.909525483,"data":"[ 28%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/softcap.cu.o\n"}
+,{"stream_name":"stdout","time":287.743189322,"data":"[ 28%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/softmax.cu.o\n"}
+,{"stream_name":"stdout","time":288.019235426,"data":"[ 28%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/solve_tri.cu.o\n"}
+,{"stream_name":"stdout","time":289.259570343,"data":"[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ssm-conv.cu.o\n"}
+,{"stream_name":"stdout","time":301.032981493,"data":"[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ssm-scan.cu.o\n"}
+,{"stream_name":"stdout","time":301.243980536,"data":"[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/sum.cu.o\n"}
+,{"stream_name":"stdout","time":303.013700773,"data":"[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/sumrows.cu.o\n"}
+,{"stream_name":"stdout","time":303.772523888,"data":"[    303s] downloaded qwen3.5-4b-bf16.gguf: 8.07 GiB\n"}
+,{"stream_name":"stdout","time":311.532733689,"data":"[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/top-k.cu.o\n"}
+,{"stream_name":"stdout","time":318.657028466,"data":"[ 30%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/topk-moe.cu.o\n"}
+,{"stream_name":"stdout","time":322.227441383,"data":"[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/tri.cu.o\n"}
+,{"stream_name":"stdout","time":326.103309704,"data":"[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/tsembd.cu.o\n"}
+,{"stream_name":"stdout","time":326.434470472,"data":"[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/unary.cu.o\n"}
+,{"stream_name":"stdout","time":330.268309861,"data":"[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/upscale.cu.o\n"}
+,{"stream_name":"stdout","time":332.540571545,"data":"[ 31%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/wkv.cu.o\n"}
+,{"stream_name":"stdout","time":333.282017197,"data":"[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq112-dv112.cu.o\n"}
+,{"stream_name":"stdout","time":337.744764511,"data":"[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq128-dv128.cu.o\n"}
+,{"stream_name":"stdout","time":338.021121912,"data":"[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq192-dv128.cu.o\n"}
+,{"stream_name":"stdout","time":342.089967558,"data":"[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq256-dv256.cu.o\n"}
+,{"stream_name":"stdout","time":369.660958989,"data":"[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq320-dv256.cu.o\n"}
+,{"stream_name":"stdout","time":376.62989856,"data":"[ 33%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq40-dv40.cu.o\n"}
+,{"stream_name":"stdout","time":383.288908039,"data":"[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq512-dv512.cu.o\n"}
+,{"stream_name":"stdout","time":405.732445531,"data":"[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq576-dv512.cu.o\n"}
+,{"stream_name":"stdout","time":409.812044759,"data":"[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq64-dv64.cu.o\n"}
+,{"stream_name":"stdout","time":444.480074282,"data":"[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq72-dv72.cu.o\n"}
+,{"stream_name":"stdout","time":454.245351817,"data":"[ 34%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq80-dv80.cu.o\n"}
+,{"stream_name":"stdout","time":460.891750093,"data":"[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq96-dv96.cu.o\n"}
+,{"stream_name":"stdout","time":463.650074315,"data":"[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_16.cu.o\n"}
+,{"stream_name":"stdout","time":483.681462479,"data":"[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_32.cu.o\n"}
+,{"stream_name":"stdout","time":493.666218318,"data":"[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_8.cu.o\n"}
+,{"stream_name":"stdout","time":502.233322794,"data":"[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_1.cu.o\n"}
+,{"stream_name":"stdout","time":507.567466068,"data":"[ 36%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_2.cu.o\n"}
+,{"stream_name":"stdout","time":507.61665121,"data":"[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_4.cu.o\n"}
+,{"stream_name":"stdout","time":524.612862897,"data":"[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_16.cu.o\n"}
+,{"stream_name":"stdout","time":546.907427564,"data":"[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_32.cu.o\n"}
+,{"stream_name":"stdout","time":557.180207949,"data":"[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_4.cu.o\n"}
+,{"stream_name":"stdout","time":566.520901888,"data":"[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_8.cu.o\n"}
+,{"stream_name":"stdout","time":588.636091285,"data":"[ 38%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_1.cu.o\n"}
+,{"stream_name":"stdout","time":590.058140463,"data":"[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_2.cu.o\n"}
+,{"stream_name":"stdout","time":605.984270042,"data":"[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_16.cu.o\n"}
+,{"stream_name":"stdout","time":616.12643135,"data":"[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_2.cu.o\n"}
+,{"stream_name":"stdout","time":633.109946093,"data":"[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_4.cu.o\n"}
+,{"stream_name":"stdout","time":641.85107032,"data":"[ 39%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_8.cu.o\n"}
+,{"stream_name":"stdout","time":668.133692601,"data":"[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_64-ncols2_1.cu.o\n"}
+,{"stream_name":"stdout","time":683.02606101,"data":"[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_1.cu.o\n"}
+,{"stream_name":"stdout","time":683.606148354,"data":"[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_2.cu.o\n"}
+,{"stream_name":"stdout","time":716.199858769,"data":"[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_4.cu.o\n"}
+,{"stream_name":"stdout","time":724.732701191,"data":"[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_8.cu.o\n"}
+,{"stream_name":"stdout","time":741.164721139,"data":"[ 41%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq1_s.cu.o\n"}
+,{"stream_name":"stdout","time":753.828022531,"data":"[ 42%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_s.cu.o\n"}
+,{"stream_name":"stdout","time":757.83064941,"data":"[ 42%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_xs.cu.o\n"}
+,{"stream_name":"stdout","time":805.204451237,"data":"[ 42%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_xxs.cu.o\n"}
+,{"stream_name":"stdout","time":810.027242679,"data":"[ 42%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq3_s.cu.o\n"}
+,{"stream_name":"stdout","time":831.069571167,"data":"[ 42%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq3_xxs.cu.o\n"}
+,{"stream_name":"stdout","time":834.395748966,"data":"[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq4_nl.cu.o\n"}
+,{"stream_name":"stdout","time":872.621074689,"data":"[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq4_xs.cu.o\n"}
+,{"stream_name":"stdout","time":880.090075972,"data":"[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-mxfp4.cu.o\n"}
+,{"stream_name":"stdout","time":898.913323273,"data":"[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-nvfp4.cu.o\n"}
+,{"stream_name":"stdout","time":901.082623486,"data":"[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q1_0.cu.o\n"}
+,{"stream_name":"stdout","time":939.105525126,"data":"[ 44%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q2_0.cu.o\n"}
+,{"stream_name":"stdout","time":949.567756866,"data":"[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q2_k.cu.o\n"}
+,{"stream_name":"stdout","time":964.863988812,"data":"[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q3_k.cu.o\n"}
+,{"stream_name":"stdout","time":978.599256829,"data":"[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_0.cu.o\n"}
+,{"stream_name":"stdout","time":1003.109553345,"data":"[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_1.cu.o\n"}
+,{"stream_name":"stdout","time":1043.409369904,"data":"[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_k.cu.o\n"}
+,{"stream_name":"stdout","time":1043.724289047,"data":"[ 46%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_0.cu.o\n"}
+,{"stream_name":"stdout","time":1045.704181813,"data":"[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_1.cu.o\n"}
+,{"stream_name":"stdout","time":1070.375079424,"data":"[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_k.cu.o\n"}
+,{"stream_name":"stdout","time":1111.848143093,"data":"[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q6_k.cu.o\n"}
+,{"stream_name":"stdout","time":1116.378589985,"data":"[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q8_0.cu.o\n"}
+,{"stream_name":"stdout","time":1118.001787221,"data":"[ 47%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_1.cu.o\n"}
+,{"stream_name":"stdout","time":1141.453118616,"data":"[ 49%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_10.cu.o\n"}
+,{"stream_name":"stdout","time":1144.575455529,"data":"[ 49%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_11.cu.o\n"}
+,{"stream_name":"stdout","time":1174.865735627,"data":"[ 49%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_12.cu.o\n"}
+,{"stream_name":"stdout","time":1178.183739494,"data":"[ 49%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_13.cu.o\n"}
+,{"stream_name":"stdout","time":1180.242841976,"data":"[ 49%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_14.cu.o\n"}
+,{"stream_name":"stdout","time":1190.212710286,"data":"[ 49%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_15.cu.o\n"}
+,{"stream_name":"stdout","time":1208.676695914,"data":"[ 50%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_16.cu.o\n"}
+,{"stream_name":"stdout","time":1212.432085775,"data":"[ 50%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_2.cu.o\n"}
+,{"stream_name":"stdout","time":1214.628905344,"data":"[ 50%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_3.cu.o\n"}
+,{"stream_name":"stdout","time":1224.920777343,"data":"[ 50%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_4.cu.o\n"}
+,{"stream_name":"stdout","time":1239.660964852,"data":"[ 50%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_5.cu.o\n"}
+,{"stream_name":"stdout","time":1242.91251888,"data":"[ 52%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_6.cu.o\n"}
+,{"stream_name":"stdout","time":1243.840610308,"data":"[ 52%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_7.cu.o\n"}
+,{"stream_name":"stdout","time":1253.697866272,"data":"[ 52%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_8.cu.o\n"}
+,{"stream_name":"stdout","time":1269.15257313,"data":"[ 52%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_9.cu.o\n"}
+,{"stream_name":"stdout","time":1273.098112215,"data":"[ 52%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-f16-f16.cu.o\n"}
+,{"stream_name":"stdout","time":1274.783296502,"data":"[ 52%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-q4_0-q4_0.cu.o\n"}
+,{"stream_name":"stdout","time":1285.10140135,"data":"[ 53%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-q8_0-q8_0.cu.o\n"}
+,{"stream_name":"stdout","time":1296.885468814,"data":"[ 53%] Building CUDA object ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-bf16-bf16.cu.o\n"}
+,{"stream_name":"stdout","time":1314.697350204,"data":"[ 53%] Linking CUDA shared library ../../../bin/libggml-cuda.so\n"}
+,{"stream_name":"stdout","time":1315.329691549,"data":"[ 53%] Built target ggml-cuda\n"}
+,{"stream_name":"stdout","time":1315.347783442,"data":"[ 53%] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-dl.cpp.o\n"}
+,{"stream_name":"stdout","time":1315.348341517,"data":"[ 53%] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o\n"}
+,{"stream_name":"stdout","time":1316.907559489,"data":"[ 53%] Linking CXX shared library ../../bin/libggml.so\n"}
+,{"stream_name":"stdout","time":1316.993172895,"data":"[ 53%] Built target ggml\n"}
+,{"stream_name":"stdout","time":1317.019682936,"data":"[ 53%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_9_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1317.019710041,"data":"[ 53%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_8_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1317.019716307,"data":"[ 53%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_7_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1317.020339571,"data":"[ 55%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_6_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1321.528696058,"data":"[ 55%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_5_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1321.798485596,"data":"[ 55%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_4_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1322.287450887,"data":"[ 55%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_3_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1324.297931656,"data":"[ 55%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_2_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1327.753645396,"data":"[ 57%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_1_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1327.82598797,"data":"[ 57%] Building CXX object src/CMakeFiles/llama.dir/Unity/unity_0_cxx.cxx.o\n"}
+,{"stream_name":"stdout","time":1328.710662832,"data":"[ 57%] Building CXX object src/CMakeFiles/llama.dir/llama.cpp.o\n"}
+,{"stream_name":"stdout","time":1329.602721149,"data":"[ 57%] Building CXX object src/CMakeFiles/llama.dir/llama-adapter.cpp.o\n"}
+,{"stream_name":"stdout","time":1331.789215922,"data":"[ 57%] Building CXX object src/CMakeFiles/llama.dir/llama-arch.cpp.o\n"}
+,{"stream_name":"stdout","time":1333.010869038,"data":"[ 57%] Building CXX object src/CMakeFiles/llama.dir/llama-batch.cpp.o\n"}
+,{"stream_name":"stdout","time":1333.315674609,"data":"[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-chat.cpp.o\n"}
+,{"stream_name":"stdout","time":1335.800453902,"data":"[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-context.cpp.o\n"}
+,{"stream_name":"stdout","time":1336.442149328,"data":"[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-cparams.cpp.o\n"}
+,{"stream_name":"stdout","time":1336.62746902,"data":"[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-grammar.cpp.o\n"}
+,{"stream_name":"stdout","time":1336.777881601,"data":"[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-graph.cpp.o\n"}
+,{"stream_name":"stdout","time":1337.403366188,"data":"[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-hparams.cpp.o\n"}
+,{"stream_name":"stdout","time":1338.391428223,"data":"[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-impl.cpp.o\n"}
+,{"stream_name":"stdout","time":1339.415417317,"data":"[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-io.cpp.o\n"}
+,{"stream_name":"stdout","time":1339.820663818,"data":"[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache.cpp.o\n"}
+,{"stream_name":"stdout","time":1344.42615353,"data":"[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-iswa.cpp.o\n"}
+,{"stream_name":"stdout","time":1344.621726584,"data":"[ 60%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsa.cpp.o\n"}
+,{"stream_name":"stdout","time":1347.435807543,"data":"[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsa-iswa.cpp.o\n"}
+,{"stream_name":"stdout","time":1347.514339609,"data":"[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-msa.cpp.o\n"}
+,{"stream_name":"stdout","time":1347.752091788,"data":"[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-dsv4.cpp.o\n"}
+,{"stream_name":"stdout","time":1350.441761836,"data":"[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-memory.cpp.o\n"}
+,{"stream_name":"stdout","time":1350.587386271,"data":"[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid.cpp.o\n"}
+,{"stream_name":"stdout","time":1350.979081371,"data":"[ 61%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid-iswa.cpp.o\n"}
+,{"stream_name":"stdout","time":1351.749207664,"data":"[ 63%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid-idx.cpp.o\n"}
+,{"stream_name":"stdout","time":1353.996458854,"data":"[ 63%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-recurrent.cpp.o\n"}
+,{"stream_name":"stdout","time":1354.547692409,"data":"[ 63%] Building CXX object src/CMakeFiles/llama.dir/llama-mmap.cpp.o\n"}
+,{"stream_name":"stdout","time":1355.969041569,"data":"[ 63%] Building CXX object src/CMakeFiles/llama.dir/llama-model-loader.cpp.o\n"}
+,{"stream_name":"stdout","time":1356.167671957,"data":"[ 63%] Building CXX object src/CMakeFiles/llama.dir/llama-model-saver.cpp.o\n"}
+,{"stream_name":"stdout","time":1356.295631123,"data":"[ 65%] Building CXX object src/CMakeFiles/llama.dir/llama-model.cpp.o\n"}
+,{"stream_name":"stdout","time":1357.685916644,"data":"[ 65%] Building CXX object src/CMakeFiles/llama.dir/llama-quant.cpp.o\n"}
+,{"stream_name":"stdout","time":1358.533507634,"data":"[ 65%] Building CXX object src/CMakeFiles/llama.dir/llama-sampler.cpp.o\n"}
+,{"stream_name":"stdout","time":1368.750351984,"data":"[ 65%] Building CXX object src/CMakeFiles/llama.dir/llama-vocab.cpp.o\n"}
+,{"stream_name":"stdout","time":1369.64187704,"data":"[ 65%] Building CXX object src/CMakeFiles/llama.dir/unicode-data.cpp.o\n"}
+,{"stream_name":"stdout","time":1370.479451863,"data":"[ 65%] Building CXX object src/CMakeFiles/llama.dir/unicode.cpp.o\n"}
+,{"stream_name":"stdout","time":1380.401438021,"data":"[ 66%] Linking CXX shared library ../bin/libllama.so\n"}
+,{"stream_name":"stdout","time":1380.668939697,"data":"[ 66%] Built target llama\n"}
+,{"stream_name":"stdout","time":1380.694157989,"data":"[ 66%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd.cpp.o\n"}
+,{"stream_name":"stdout","time":1380.694737194,"data":"[ 66%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-audio.cpp.o\n"}
+,{"stream_name":"stdout","time":1380.695626925,"data":"[ 66%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/parsers.cpp.o\n"}
+,{"stream_name":"stdout","time":1380.695644983,"data":"[ 66%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-image.cpp.o\n"}
+,{"stream_name":"stdout","time":1384.272931139,"data":"[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/cohere2moe.cpp.o\n"}
+,{"stream_name":"stdout","time":1385.469378175,"data":"[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/deepseek.cpp.o\n"}
+,{"stream_name":"stdout","time":1385.819549328,"data":"[ 68%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/functionary-v3-2.cpp.o\n"}
+,{"stream_name":"stdout","time":1388.821492563,"data":"[ 69%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper.cpp.o\n"}
+,{"stream_name":"stdout","time":1389.658692966,"data":"[ 69%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/mtmd-helper-gen.cpp.o\n"}
+,{"stream_name":"stdout","time":1390.720361482,"data":"[ 69%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/clip.cpp.o\n"}
+,{"stream_name":"stdout","time":1392.397397329,"data":"[ 69%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gemma4.cpp.o\n"}
+,{"stream_name":"stdout","time":1394.607108895,"data":"[ 69%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gigachat-v3.cpp.o\n"}
+,{"stream_name":"stdout","time":1398.546533121,"data":"[ 69%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/cogvlm.cpp.o\n"}
+,{"stream_name":"stdout","time":1399.485691273,"data":"[ 69%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/gpt-oss.cpp.o\n"}
+,{"stream_name":"stdout","time":1400.33322559,"data":"[ 71%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/kimi-k2.cpp.o\n"}
+,{"stream_name":"stdout","time":1405.05339899,"data":"[ 71%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/conformer.cpp.o\n"}
+,{"stream_name":"stdout","time":1405.42978178,"data":"[ 71%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/kimi-k3.cpp.o\n"}
+,{"stream_name":"stdout","time":1406.951738065,"data":"[ 71%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/ling3.cpp.o\n"}
+,{"stream_name":"stdout","time":1410.563504763,"data":"[ 71%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/lfm2.cpp.o\n"}
+,{"stream_name":"stdout","time":1412.759948103,"data":"[ 71%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/minicpm5.cpp.o\n"}
+,{"stream_name":"stdout","time":1414.201406697,"data":"[ 71%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/deepseek4v.cpp.o\n"}
+,{"stream_name":"stdout","time":1415.233965673,"data":"[ 73%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/dots3note.cpp.o\n"}
+,{"stream_name":"stdout","time":1416.024759703,"data":"[ 74%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/minimax-m3.cpp.o\n"}
+,{"stream_name":"stdout","time":1417.115941186,"data":"[ 74%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/ministral3.cpp.o\n"}
+,{"stream_name":"stdout","time":1418.585335199,"data":"[ 74%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/dotsocr.cpp.o\n"}
+,{"stream_name":"stdout","time":1419.866420079,"data":"[ 74%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/muse-glimmer.cpp.o\n"}
+,{"stream_name":"stdout","time":1420.45285373,"data":"[ 74%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/exaone4_5.cpp.o\n"}
+,{"stream_name":"stdout","time":1422.057853023,"data":"[ 74%] Building CXX object common/CMakeFiles/llama-common.dir/parsers/qwen3-coder.cpp.o\n"}
+,{"stream_name":"stdout","time":1422.363557239,"data":"[ 74%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4a.cpp.o\n"}
+,{"stream_name":"stdout","time":1422.580994533,"data":"[ 74%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4v.cpp.o\n"}
+,{"stream_name":"stdout","time":1424.340578094,"data":"[ 74%] Building CXX object common/CMakeFiles/llama-common.dir/arg.cpp.o\n"}
+,{"stream_name":"stdout","time":1424.516832313,"data":"[ 76%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4ua.cpp.o\n"}
+,{"stream_name":"stdout","time":1425.741072607,"data":"[ 76%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/gemma4uv.cpp.o\n"}
+,{"stream_name":"stdout","time":1426.323105876,"data":"[ 76%] Building CXX object common/CMakeFiles/llama-common.dir/chat-auto-parser-generator.cpp.o\n"}
+,{"stream_name":"stdout","time":1427.495857618,"data":"[ 76%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/glm4v.cpp.o\n"}
+,{"stream_name":"stdout","time":1428.070435294,"data":"[ 76%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/granite-speech.cpp.o\n"}
+,{"stream_name":"stdout","time":1429.372620751,"data":"[ 77%] Building CXX object common/CMakeFiles/llama-common.dir/chat-auto-parser-helpers.cpp.o\n"}
+,{"stream_name":"stdout","time":1430.135824233,"data":"[ 77%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/granite4-vision.cpp.o\n"}
+,{"stream_name":"stdout","time":1432.575554214,"data":"[ 77%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/hunyuanvl.cpp.o\n"}
+,{"stream_name":"stdout","time":1432.692628691,"data":"[ 79%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/internvl.cpp.o\n"}
+,{"stream_name":"stdout","time":1433.929087192,"data":"[ 79%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/kimivl.cpp.o\n"}
+,{"stream_name":"stdout","time":1434.434631848,"data":"[ 79%] Building CXX object common/CMakeFiles/llama-common.dir/chat-diff-analyzer.cpp.o\n"}
+,{"stream_name":"stdout","time":1434.478273677,"data":"[ 79%] Building CXX object common/CMakeFiles/llama-common.dir/chat-peg-parser.cpp.o\n"}
+,{"stream_name":"stdout","time":1435.843554812,"data":"[ 79%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/kimik25.cpp.o\n"}
+,{"stream_name":"stdout","time":1437.763707363,"data":"[ 79%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/nemotron-v2-vl.cpp.o\n"}
+,{"stream_name":"stdout","time":1439.48590907,"data":"[ 79%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/muse-glimmer.cpp.o\n"}
+,{"stream_name":"stdout","time":1441.392623965,"data":"[ 80%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/llama4.cpp.o\n"}
+,{"stream_name":"stdout","time":1443.084098654,"data":"[ 80%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/llava.cpp.o\n"}
+,{"stream_name":"stdout","time":1443.390045015,"data":"[ 80%] Building CXX object common/CMakeFiles/llama-common.dir/chat.cpp.o\n"}
+,{"stream_name":"stdout","time":1444.895758338,"data":"[ 80%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/minicpmv.cpp.o\n"}
+,{"stream_name":"stdout","time":1446.657798842,"data":"[ 80%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/paddleocr.cpp.o\n"}
+,{"stream_name":"stdout","time":1446.77089206,"data":"[ 80%] Building CXX object common/CMakeFiles/llama-common.dir/common.cpp.o\n"}
+,{"stream_name":"stdout","time":1448.460573227,"data":"[ 80%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/pixtral.cpp.o\n"}
+,{"stream_name":"stdout","time":1450.285949167,"data":"[ 80%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen2vl.cpp.o\n"}
+,{"stream_name":"stdout","time":1452.16283179,"data":"[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/minimax-m3.cpp.o\n"}
+,{"stream_name":"stdout","time":1453.968306086,"data":"[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3vl.cpp.o\n"}
+,{"stream_name":"stdout","time":1455.053860444,"data":"[ 82%] Building CXX object common/CMakeFiles/llama-common.dir/console.cpp.o\n"}
+,{"stream_name":"stdout","time":1455.824976847,"data":"[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/mimovl.cpp.o\n"}
+,{"stream_name":"stdout","time":1457.113070666,"data":"[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3a.cpp.o\n"}
+,{"stream_name":"stdout","time":1457.449349204,"data":"[ 82%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/mimo-audio.cpp.o\n"}
+,{"stream_name":"stdout","time":1457.71907697,"data":"[ 84%] Building CXX object common/CMakeFiles/llama-common.dir/debug.cpp.o\n"}
+,{"stream_name":"stdout","time":1458.654016829,"data":"[ 84%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3tts-spkenc.cpp.o\n"}
+,{"stream_name":"stdout","time":1458.978629262,"data":"[ 84%] Building CXX object common/CMakeFiles/llama-common.dir/download.cpp.o\n"}
+,{"stream_name":"stdout","time":1459.539473736,"data":"[ 84%] Building CXX object common/CMakeFiles/llama-common.dir/fit.cpp.o\n"}
+,{"stream_name":"stdout","time":1460.65660006,"data":"[ 85%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/qwen3tts-gen.cpp.o\n"}
+,{"stream_name":"stdout","time":1464.323409783,"data":"[ 85%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-seanet.cpp.o\n"}
+,{"stream_name":"stdout","time":1464.656167281,"data":"[ 85%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-spkenc.cpp.o\n"}
+,{"stream_name":"stdout","time":1464.937524331,"data":"[ 85%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/pockettts-gen.cpp.o\n"}
+,{"stream_name":"stdout","time":1466.487982244,"data":"[ 85%] Building CXX object common/CMakeFiles/llama-common.dir/hf-cache.cpp.o\n"}
+,{"stream_name":"stdout","time":1466.631442125,"data":"[ 85%] Building CXX object common/CMakeFiles/llama-common.dir/imatrix-loader.cpp.o\n"}
+,{"stream_name":"stdout","time":1467.770882565,"data":"[ 85%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/step3vl.cpp.o\n"}
+,{"stream_name":"stdout","time":1468.895419472,"data":"[ 87%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/siglip.cpp.o\n"}
+,{"stream_name":"stdout","time":1469.590580441,"data":"[ 88%] Building CXX object common/CMakeFiles/llama-common.dir/json-schema-to-grammar.cpp.o\n"}
+,{"stream_name":"stdout","time":1470.707153808,"data":"[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/whisper-enc.cpp.o\n"}
+,{"stream_name":"stdout","time":1472.561134147,"data":"[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/deepseekocr.cpp.o\n"}
+,{"stream_name":"stdout","time":1472.852868013,"data":"[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/deepseekocr2.cpp.o\n"}
+,{"stream_name":"stdout","time":1473.098359859,"data":"[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/mobilenetv5.cpp.o\n"}
+,{"stream_name":"stdout","time":1474.684548931,"data":"[ 88%] Building CXX object common/CMakeFiles/llama-common.dir/json-schema.cpp.o\n"}
+,{"stream_name":"stdout","time":1474.698989894,"data":"[ 88%] Building CXX object common/CMakeFiles/llama-common.dir/json.cpp.o\n"}
+,{"stream_name":"stdout","time":1475.272986177,"data":"[ 88%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/youtuvl.cpp.o\n"}
+,{"stream_name":"stdout","time":1477.363911545,"data":"[ 90%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/yasa2.cpp.o\n"}
+,{"stream_name":"stdout","time":1479.270037417,"data":"[ 90%] Building CXX object tools/mtmd/CMakeFiles/mtmd.dir/models/parakeet.cpp.o\n"}
+,{"stream_name":"stdout","time":1479.412049396,"data":"[ 90%] Building CXX object common/CMakeFiles/llama-common.dir/llguidance.cpp.o\n"}
+,{"stream_name":"stdout","time":1480.550499344,"data":"[ 90%] Building CXX object common/CMakeFiles/llama-common.dir/log.cpp.o\n"}
+,{"stream_name":"stdout","time":1481.372810499,"data":"[ 90%] Linking CXX shared library ../../bin/libmtmd.so\n"}
+,{"stream_name":"stdout","time":1481.631059317,"data":"[ 90%] Built target mtmd\n"}
+,{"stream_name":"stdout","time":1481.636833529,"data":"[ 90%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-cache.cpp.o\n"}
+,{"stream_name":"stdout","time":1482.679659589,"data":"[ 92%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-map.cpp.o\n"}
+,{"stream_name":"stdout","time":1482.780884359,"data":"[ 92%] Building CXX object common/CMakeFiles/llama-common.dir/ngram-mod.cpp.o\n"}
+,{"stream_name":"stdout","time":1483.256288256,"data":"[ 92%] Building CXX object common/CMakeFiles/llama-common.dir/peg-parser.cpp.o\n"}
+,{"stream_name":"stdout","time":1483.863951521,"data":"[ 92%] Building CXX object common/CMakeFiles/llama-common.dir/preset.cpp.o\n"}
+,{"stream_name":"stdout","time":1484.360602336,"data":"[ 92%] Building CXX object common/CMakeFiles/llama-common.dir/reasoning-budget.cpp.o\n"}
+,{"stream_name":"stdout","time":1486.373868974,"data":"[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/sampling.cpp.o\n"}
+,{"stream_name":"stdout","time":1486.390909253,"data":"[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/speculative.cpp.o\n"}
+,{"stream_name":"stdout","time":1490.733845996,"data":"[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/subproc.cpp.o\n"}
+,{"stream_name":"stdout","time":1491.507965003,"data":"[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/trie.cpp.o\n"}
+,{"stream_name":"stdout","time":1492.802216539,"data":"[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/unicode.cpp.o\n"}
+,{"stream_name":"stdout","time":1493.498903938,"data":"[ 93%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/lexer.cpp.o\n"}
+,{"stream_name":"stdout","time":1496.220167129,"data":"[ 95%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/parser.cpp.o\n"}
+,{"stream_name":"stdout","time":1496.423793524,"data":"[ 95%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/runtime.cpp.o\n"}
+,{"stream_name":"stdout","time":1496.633587458,"data":"[ 95%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/value.cpp.o\n"}
+,{"stream_name":"stdout","time":1501.674080494,"data":"[ 95%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/string.cpp.o\n"}
+,{"stream_name":"stdout","time":1502.726312123,"data":"[ 95%] Building CXX object common/CMakeFiles/llama-common.dir/jinja/caps.cpp.o\n"}
+,{"stream_name":"stdout","time":1507.428674476,"data":"[ 95%] Linking CXX shared library ../bin/libllama-common.so\n"}
+,{"stream_name":"stdout","time":1507.801636936,"data":"[ 95%] Built target llama-common\n"}
+,{"stream_name":"stdout","time":1507.818992543,"data":"[ 95%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-chat.cpp.o\n"}
+,{"stream_name":"stdout","time":1507.819466135,"data":"[ 95%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-task.cpp.o\n"}
+,{"stream_name":"stdout","time":1507.819545485,"data":"[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-queue.cpp.o\n"}
+,{"stream_name":"stdout","time":1507.820565883,"data":"[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-common.cpp.o\n"}
+,{"stream_name":"stdout","time":1515.419500542,"data":"[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-context.cpp.o\n"}
+,{"stream_name":"stdout","time":1516.450043912,"data":"[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-stream.cpp.o\n"}
+,{"stream_name":"stdout","time":1519.874578609,"data":"[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-tools.cpp.o\n"}
+,{"stream_name":"stdout","time":1523.3953267,"data":"[ 96%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-mcp.cpp.o\n"}
+,{"stream_name":"stdout","time":1524.842180849,"data":"[ 98%] Building CXX object tools/server/CMakeFiles/server-context.dir/server-schema.cpp.o\n"}
+,{"stream_name":"stdout","time":1538.20797523,"data":"[ 98%] Linking CXX static library libserver-context.a\n"}
+,{"stream_name":"stdout","time":1538.268876661,"data":"[ 98%] Built target server-context\n"}
+,{"stream_name":"stdout","time":1538.286832613,"data":"[ 98%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server.cpp.o\n"}
+,{"stream_name":"stdout","time":1538.287890788,"data":"[ 98%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-http.cpp.o\n"}
+,{"stream_name":"stdout","time":1538.288631739,"data":"[100%] Building CXX object tools/server/CMakeFiles/llama-server-impl.dir/server-models.cpp.o\n"}
+,{"stream_name":"stdout","time":1553.641764734,"data":"[100%] Linking CXX shared library ../../bin/libllama-server-impl.so\n"}
+,{"stream_name":"stdout","time":1553.871824308,"data":"[100%] Built target llama-server-impl\n"}
+,{"stream_name":"stdout","time":1553.886268913,"data":"[100%] Building CXX object tools/server/CMakeFiles/llama-server.dir/main.cpp.o\n"}
+,{"stream_name":"stdout","time":1553.911414809,"data":"[100%] Linking CXX executable ../../bin/llama-server\n"}
+,{"stream_name":"stdout","time":1554.038858119,"data":"[100%] Built target llama-server\n"}
+,{"stream_name":"stdout","time":1554.093414804,"data":"[  2%] Built target llama-common-base\n"}
+,{"stream_name":"stdout","time":1554.103873625,"data":"[  2%] Built target cpp-httplib\n"}
+,{"stream_name":"stdout","time":1554.10844727,"data":"[  6%] Built target ggml-base\n"}
+,{"stream_name":"stdout","time":1554.145591256,"data":"[ 12%] Built target ggml-cpu\n"}
+,{"stream_name":"stdout","time":1554.407727599,"data":"[ 64%] Built target ggml-cuda\n"}
+,{"stream_name":"stdout","time":1554.425941005,"data":"[ 64%] Built target ggml\n"}
+,{"stream_name":"stdout","time":1554.499575569,"data":"[ 80%] Built target llama\n"}
+,{"stream_name":"stdout","time":1554.592109983,"data":"[ 98%] Built target llama-common\n"}
+,{"stream_name":"stdout","time":1554.606634718,"data":"[ 98%] Building CXX object tools/perplexity/CMakeFiles/llama-perplexity-impl.dir/perplexity.cpp.o\n"}
+,{"stream_name":"stdout","time":1559.453342297,"data":"[100%] Linking CXX shared library ../../bin/libllama-perplexity-impl.so\n"}
+,{"stream_name":"stdout","time":1559.571540119,"data":"[100%] Built target llama-perplexity-impl\n"}
+,{"stream_name":"stdout","time":1559.587552789,"data":"[100%] Building CXX object tools/perplexity/CMakeFiles/llama-perplexity.dir/main.cpp.o\n"}
+,{"stream_name":"stdout","time":1559.613071753,"data":"[100%] Linking CXX executable ../../bin/llama-perplexity\n"}
+,{"stream_name":"stdout","time":1559.716874983,"data":"[100%] Built target llama-perplexity\n"}
+,{"stream_name":"stdout","time":1559.770027752,"data":"[  2%] Built target llama-common-base\n"}
+,{"stream_name":"stdout","time":1559.771023824,"data":"[  2%] Built target cpp-httplib\n"}
+,{"stream_name":"stdout","time":1559.775491508,"data":"[  6%] Built target ggml-base\n"}
+,{"stream_name":"stdout","time":1559.798928262,"data":"[ 12%] Built target ggml-cpu\n"}
+,{"stream_name":"stdout","time":1559.897068448,"data":"[ 64%] Built target ggml-cuda\n"}
+,{"stream_name":"stdout","time":1559.912827593,"data":"[ 64%] Built target ggml\n"}
+,{"stream_name":"stdout","time":1559.948164567,"data":"[ 80%] Built target llama\n"}
+,{"stream_name":"stdout","time":1559.991353249,"data":"[ 98%] Built target llama-common\n"}
+,{"stream_name":"stdout","time":1560.006931481,"data":"[100%] Building CXX object tools/quantize/CMakeFiles/llama-quantize-impl.dir/quantize.cpp.o\n"}
+,{"stream_name":"stdout","time":1562.343381174,"data":"[100%] Linking CXX shared library ../../bin/libllama-quantize-impl.so\n"}
+,{"stream_name":"stdout","time":1562.448569068,"data":"[100%] Built target llama-quantize-impl\n"}
+,{"stream_name":"stdout","time":1562.463664254,"data":"[100%] Building CXX object tools/quantize/CMakeFiles/llama-quantize.dir/main.cpp.o\n"}
+,{"stream_name":"stdout","time":1562.48919185,"data":"[100%] Linking CXX executable ../../bin/llama-quantize\n"}
+,{"stream_name":"stdout","time":1562.595817253,"data":"[100%] Built target llama-quantize\n"}
+,{"stream_name":"stdout","time":1562.647174262,"data":"[  2%] Built target llama-common-base\n"}
+,{"stream_name":"stdout","time":1562.650887725,"data":"[  2%] Built target cpp-httplib\n"}
+,{"stream_name":"stdout","time":1562.654442649,"data":"[  6%] Built target ggml-base\n"}
+,{"stream_name":"stdout","time":1562.67782251,"data":"[ 12%] Built target ggml-cpu\n"}
+,{"stream_name":"stdout","time":1562.778454229,"data":"[ 64%] Built target ggml-cuda\n"}
+,{"stream_name":"stdout","time":1562.794128361,"data":"[ 64%] Built target ggml\n"}
+,{"stream_name":"stdout","time":1562.829550336,"data":"[ 80%] Built target llama\n"}
+,{"stream_name":"stdout","time":1562.870781057,"data":"[ 98%] Built target llama-common\n"}
+,{"stream_name":"stdout","time":1562.886147721,"data":"[ 98%] Building CXX object tools/llama-bench/CMakeFiles/llama-bench-impl.dir/llama-bench.cpp.o\n"}
+,{"stream_name":"stdout","time":1574.269606053,"data":"[ 98%] Linking CXX shared library ../../bin/libllama-bench-impl.so\n"}
+,{"stream_name":"stdout","time":1574.397941657,"data":"[ 98%] Built target llama-bench-impl\n"}
+,{"stream_name":"stdout","time":1574.414353231,"data":"[100%] Building CXX object tools/llama-bench/CMakeFiles/llama-bench.dir/main.cpp.o\n"}
+,{"stream_name":"stdout","time":1574.439458914,"data":"[100%] Linking CXX executable ../../bin/llama-bench\n"}
+,{"stream_name":"stdout","time":1574.548058465,"data":"[100%] Built target llama-bench\n"}
+,{"stream_name":"stdout","time":1574.966318561,"data":"[   1574s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-F16.gguf F16\n"}
+,{"stream_name":"stdout","time":1585.688932144,"data":"[   1585s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q8_0.gguf Q8_0\n"}
+,{"stream_name":"stdout","time":1591.673574168,"data":"[   1591s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q6_K.gguf Q6_K\n"}
+,{"stream_name":"stdout","time":1608.799281135,"data":"[   1608s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q5_K_M.gguf Q5_K_M\n"}
+,{"stream_name":"stdout","time":1635.329491608,"data":"[   1635s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q4_K_M.gguf Q4_K_M\n"}
+,{"stream_name":"stdout","time":1665.570146769,"data":"[   1665s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q3_K_M.gguf Q3_K_M\n"}
+,{"stream_name":"stdout","time":1686.508100959,"data":"[   1686s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q2_K.gguf Q2_K\n"}
+,{"stream_name":"stdout","time":1712.531644882,"data":"[   1712s] quantized qwen3.5-0.8b: qwen3.5-0.8b-F16.gguf 1.45G, qwen3.5-0.8b-Q2_K.gguf 0.40G, qwen3.5-0.8b-Q3_K_M.gguf 0.44G, qwen3.5-0.8b-Q4_K_M.gguf 0.50G, qwen3.5-0.8b-Q5_K_M.gguf 0.55G, qwen3.5-0.8b-Q6_K.gguf 0.60G, qwen3.5-0.8b-Q8_0.gguf 0.78G\n"}
+,{"stream_name":"stdout","time":1712.679868072,"data":"[   1712s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-F16.gguf F16\n"}
+,{"stream_name":"stdout","time":1738.710177537,"data":"[   1738s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q8_0.gguf Q8_0\n"}
+,{"stream_name":"stdout","time":1750.501660825,"data":"[   1750s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q6_K.gguf Q6_K\n"}
+,{"stream_name":"stdout","time":1791.720987454,"data":"[   1791s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q5_K_M.gguf Q5_K_M\n"}
+,{"stream_name":"stdout","time":1859.566439807,"data":"[   1859s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q4_K_M.gguf Q4_K_M\n"}
+,{"stream_name":"stdout","time":1937.471106681,"data":"[   1937s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q3_K_M.gguf Q3_K_M\n"}
+,{"stream_name":"stdout","time":1986.459305698,"data":"[   1986s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q2_K.gguf Q2_K\n"}
+,{"stream_name":"stdout","time":2049.655674032,"data":"[   2049s] quantized qwen3.5-2b: qwen3.5-2b-F16.gguf 3.63G, qwen3.5-2b-Q2_K.gguf 0.92G, qwen3.5-2b-Q3_K_M.gguf 1.05G, qwen3.5-2b-Q4_K_M.gguf 1.22G, qwen3.5-2b-Q5_K_M.gguf 1.35G, qwen3.5-2b-Q6_K.gguf 1.50G, qwen3.5-2b-Q8_0.gguf 1.93G\n"}
+,{"stream_name":"stdout","time":2050.021906043,"data":"[   2049s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-F16.gguf F16\n"}
+,{"stream_name":"stdout","time":2103.080614987,"data":"[   2102s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q8_0.gguf Q8_0\n"}
+,{"stream_name":"stdout","time":2145.419057829,"data":"[   2145s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q6_K.gguf Q6_K\n"}
+,{"stream_name":"stdout","time":2235.136331058,"data":"[   2234s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q5_K_M.gguf Q5_K_M\n"}
+,{"stream_name":"stdout","time":2390.442563232,"data":"[   2390s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q4_K_M.gguf Q4_K_M\n"}
+,{"stream_name":"stdout","time":2576.435314603,"data":"[   2576s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q3_K_M.gguf Q3_K_M\n"}
+,{"stream_name":"stdout","time":2682.345830284,"data":"[   2682s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q2_K.gguf Q2_K\n"}
+,{"stream_name":"stdout","time":2829.543549175,"data":"[   2829s] quantized qwen3.5-4b: qwen3.5-4b-F16.gguf 8.07G, qwen3.5-4b-Q2_K.gguf 1.82G, qwen3.5-4b-Q3_K_M.gguf 2.16G, qwen3.5-4b-Q4_K_M.gguf 2.59G, qwen3.5-4b-Q5_K_M.gguf 2.94G, qwen3.5-4b-Q6_K.gguf 3.32G, qwen3.5-4b-Q8_0.gguf 4.29G\n"}
+,{"stream_name":"stdout","time":4834.506220776,"data":"[   4834s] GPU1: evaluation of qwen3.5-0.8b finished\n"}
+,{"stream_name":"stdout","time":7689.964652243,"data":"[   7689s] GPU1: evaluation of qwen3.5-2b finished\n"}
+,{"stream_name":"stdout","time":9764.722978436,"data":"[   9764s] GPU0: evaluation of qwen3.5-4b finished\n"}
+,{"stream_name":"stdout","time":11694.899401956,"data":"[  11694s] T4 energy benchmark finished\n"}
+,{"stream_name":"stdout","time":11694.902611356,"data":"[  11694s] done\n"}
+,{"stream_name":"stderr","time":11697.180688295,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":11697.180722416,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":11697.461186574,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":11697.461236362,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":11698.68209828,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":11699.91257542,"data":"[NbConvertApp] Writing 308650 bytes to __results__.html\n"}
+]

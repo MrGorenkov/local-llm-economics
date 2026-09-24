@@ -1,0 +1,19 @@
+{
+ "ru": {
+  "sentences": 3000,
+  "tokens": 100176,
+  "words": 52100,
+  "chars": 372401,
+  "tok_per_word": 1.9227639155470249,
+  "chars_per_tok": 3.717467257626577
+ },
+ "en": {
+  "sentences": 3000,
+  "tokens": 80619,
+  "words": 64502,
+  "chars": 379534,
+  "tok_per_word": 1.2498682211404297,
+  "chars_per_tok": 4.707748793708679
+ },
+ "ru_en_token_ratio": 1.2425854947344919
+}

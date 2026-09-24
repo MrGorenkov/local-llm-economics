@@ -1,0 +1,28 @@
+{"model": "qwen3.5-4b", "quant": "F16", "lang": "ru", "metric": "ppl", "seconds": 72.5, "ppl": 9.7371, "ppl_se": 0.33731}
+{"model": "qwen3.5-4b", "quant": "Q8_0", "lang": "ru", "metric": "ppl_kld", "seconds": 54.9, "mean_kld": 0.002376, "mean_kld_se": 0.000343, "same_top_p": 97.68, "same_top_p_se": 0.192, "kld_99": 0.010542, "ppl": 9.725616, "ppl_se": 0.33658}
+{"model": "qwen3.5-4b", "quant": "Q6_K", "lang": "ru", "metric": "ppl_kld", "seconds": 41.2, "mean_kld": 0.005578, "mean_kld_se": 0.000477, "same_top_p": 96.029, "same_top_p_se": 0.25, "kld_99": 0.032378, "ppl": 9.802891, "ppl_se": 0.340417}
+{"model": "qwen3.5-4b", "quant": "Q5_K_M", "lang": "ru", "metric": "ppl_kld", "seconds": 43.5, "mean_kld": 0.016257, "mean_kld_se": 0.001446, "same_top_p": 93.889, "same_top_p_se": 0.306, "kld_99": 0.092876, "ppl": 9.842476, "ppl_se": 0.342169}
+{"model": "qwen3.5-4b", "quant": "Q4_K_M", "lang": "ru", "metric": "ppl_kld", "seconds": 38.0, "mean_kld": 0.045954, "mean_kld_se": 0.003042, "same_top_p": 90.065, "same_top_p_se": 0.382, "kld_99": 0.295846, "ppl": 9.993777, "ppl_se": 0.347915}
+{"model": "qwen3.5-4b", "quant": "Q3_K_M", "lang": "ru", "metric": "ppl_kld", "seconds": 36.1, "mean_kld": 0.149589, "mean_kld_se": 0.00368, "same_top_p": 80.997, "same_top_p_se": 0.502, "kld_99": 1.226902, "ppl": 10.99459, "ppl_se": 0.384627}
+{"model": "qwen3.5-4b", "quant": "Q2_K", "lang": "ru", "metric": "ppl_kld", "seconds": 32.4, "mean_kld": 2.192542, "mean_kld_se": 0.02405, "same_top_p": 35.605, "same_top_p_se": 0.612, "kld_99": 8.22462, "ppl": 81.309152, "ppl_se": 3.598396}
+{"model": "qwen3.5-4b", "quant": "F16", "lang": "en", "metric": "ppl", "seconds": 58.1, "ppl": 12.8115, "ppl_se": 0.45748}
+{"model": "qwen3.5-4b", "quant": "Q8_0", "lang": "en", "metric": "ppl_kld", "seconds": 48.7, "mean_kld": 0.001477, "mean_kld_se": 4.7e-05, "same_top_p": 97.369, "same_top_p_se": 0.205, "kld_99": 0.006823, "ppl": 12.791315, "ppl_se": 0.456173}
+{"model": "qwen3.5-4b", "quant": "Q6_K", "lang": "en", "metric": "ppl_kld", "seconds": 38.8, "mean_kld": 0.004212, "mean_kld_se": 0.000102, "same_top_p": 95.964, "same_top_p_se": 0.252, "kld_99": 0.023948, "ppl": 12.898394, "ppl_se": 0.461622}
+{"model": "qwen3.5-4b", "quant": "Q5_K_M", "lang": "en", "metric": "ppl_kld", "seconds": 34.5, "mean_kld": 0.015572, "mean_kld_se": 0.001095, "same_top_p": 94.085, "same_top_p_se": 0.302, "kld_99": 0.11656, "ppl": 13.048875, "ppl_se": 0.468679}
+{"model": "qwen3.5-4b", "quant": "Q4_K_M", "lang": "en", "metric": "ppl_kld", "seconds": 32.9, "mean_kld": 0.037177, "mean_kld_se": 0.001474, "same_top_p": 89.853, "same_top_p_se": 0.386, "kld_99": 0.269864, "ppl": 13.308354, "ppl_se": 0.479014}
+{"model": "qwen3.5-4b", "quant": "Q3_K_M", "lang": "en", "metric": "ppl_kld", "seconds": 31.1, "mean_kld": 0.11664, "mean_kld_se": 0.003019, "same_top_p": 83.17, "same_top_p_se": 0.478, "kld_99": 0.790634, "ppl": 14.396436, "ppl_se": 0.524832}
+{"model": "qwen3.5-4b", "quant": "Q2_K", "lang": "en", "metric": "ppl_kld", "seconds": 30.8, "mean_kld": 1.401649, "mean_kld_se": 0.016448, "same_top_p": 47.729, "same_top_p_se": 0.639, "kld_99": 6.121849, "ppl": 49.613289, "ppl_se": 2.102565}
+{"model": "qwen3.5-4b", "quant": "F16", "lang": "ru", "metric": "mmlu", "seconds": 424.4, "n": 600, "accuracy": 0.735, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "F16", "lang": "en", "metric": "mmlu", "seconds": 372.1, "n": 600, "accuracy": 0.8233333333333334, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q8_0", "lang": "ru", "metric": "mmlu", "seconds": 448.7, "n": 600, "accuracy": 0.74, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q8_0", "lang": "en", "metric": "mmlu", "seconds": 414.7, "n": 600, "accuracy": 0.8166666666666667, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q6_K", "lang": "ru", "metric": "mmlu", "seconds": 485.8, "n": 600, "accuracy": 0.7366666666666667, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q6_K", "lang": "en", "metric": "mmlu", "seconds": 415.2, "n": 600, "accuracy": 0.8116666666666666, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q5_K_M", "lang": "ru", "metric": "mmlu", "seconds": 467.8, "n": 600, "accuracy": 0.725, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q5_K_M", "lang": "en", "metric": "mmlu", "seconds": 403.9, "n": 600, "accuracy": 0.8166666666666667, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q4_K_M", "lang": "ru", "metric": "mmlu", "seconds": 458.4, "n": 600, "accuracy": 0.7283333333333334, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q4_K_M", "lang": "en", "metric": "mmlu", "seconds": 397.6, "n": 600, "accuracy": 0.8, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q3_K_M", "lang": "ru", "metric": "mmlu", "seconds": 487.4, "n": 600, "accuracy": 0.6816666666666666, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q3_K_M", "lang": "en", "metric": "mmlu", "seconds": 419.9, "n": 600, "accuracy": 0.75, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q2_K", "lang": "ru", "metric": "mmlu", "seconds": 545.0, "n": 600, "accuracy": 0.3516666666666667, "no_letter": 0}
+{"model": "qwen3.5-4b", "quant": "Q2_K", "lang": "en", "metric": "mmlu", "seconds": 465.2, "n": 600, "accuracy": 0.415, "no_letter": 0}

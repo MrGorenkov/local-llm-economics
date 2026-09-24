@@ -1,0 +1,899 @@
+% refs.bib -- literature for "Energy per token and cost of ownership of quantized small LLMs
+% on an entry-level consumer GPU: evidence for Russian-language workloads"
+% Compiled 2026-09-23. Every entry was checked against Crossref (api.crossref.org),
+% Semantic Scholar (api.semanticscholar.org, batch endpoint) and/or the arXiv API (export.arxiv.org).
+% Custom field `indexed`:
+%   scopus/wos likely                  -- peer-reviewed journal or indexed proceedings (ACL Anthology, IEEE, ACM,
+%                                         Springer, Elsevier, NeurIPS/Curran, ICML/PMLR, JMLR, ...)
+%   peer-reviewed; indexing unverified -- peer-reviewed venue whose Scopus/WoS coverage I could not confirm
+%                                         (ICLR, MLSys, NSDI, TMLR, HotCarbon/SIGENERGY EIR, Visual Intelligence);
+%                                         do NOT count these toward the journal's 50 % rule unless you check them
+%   preprint                           -- arXiv only (some are "accepted at" a venue; see note field)
+%   software                           -- code/software citation, not counted
+% See notes.md for what each paper contributes and exact quotes.
+
+% ======================================================================
+% 1. Green AI, energy and carbon of ML / LLM inference
+% ======================================================================
+
+@inproceedings{strubell2019energy,
+  author    = {Strubell, Emma and Ganesh, Ananya and McCallum, Andrew},
+  title     = {Energy and Policy Considerations for Deep Learning in {NLP}},
+  booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages     = {3645--3650},
+  year      = {2019},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/P19-1355},
+  indexed   = {scopus/wos likely}
+}
+
+@article{schwartz2020green,
+  author  = {Schwartz, Roy and Dodge, Jesse and Smith, Noah A. and Etzioni, Oren},
+  title   = {Green {AI}},
+  journal = {Communications of the ACM},
+  volume  = {63},
+  number  = {12},
+  pages   = {54--63},
+  year    = {2020},
+  doi     = {10.1145/3381831},
+  indexed = {scopus/wos likely}
+}
+
+@article{patterson2022carbon,
+  author  = {Patterson, David and Gonzalez, Joseph and H{\"o}lzle, Urs and Le, Quoc and Liang, Chen and Munguia, Lluis-Miquel and Rothchild, Daniel and So, David R. and Texier, Maud and Dean, Jeff},
+  title   = {The Carbon Footprint of Machine Learning Training Will Plateau, Then Shrink},
+  journal = {Computer},
+  volume  = {55},
+  number  = {7},
+  pages   = {18--28},
+  year    = {2022},
+  doi     = {10.1109/MC.2022.3148714},
+  indexed = {scopus/wos likely}
+}
+
+@inproceedings{luccioni2024power,
+  author    = {Luccioni, Sasha and Jernite, Yacine and Strubell, Emma},
+  title     = {Power Hungry Processing: Watts Driving the Cost of {AI} Deployment?},
+  booktitle = {Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24)},
+  pages     = {85--99},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3630106.3658542},
+  eprint    = {2311.16863},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{samsi2023words,
+  author    = {Samsi, Siddharth and Zhao, Dan and McDonald, Joseph and Li, Baolin and Michaleas, Adam and Jones, Michael and Bergeron, William and Kepner, Jeremy and Tiwari, Devesh and Gadepally, Vijay},
+  title     = {From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference},
+  booktitle = {2023 IEEE High Performance Extreme Computing Conference (HPEC)},
+  pages     = {1--9},
+  year      = {2023},
+  publisher = {IEEE},
+  doi       = {10.1109/HPEC58863.2023.10363447},
+  eprint    = {2310.03003},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@article{wilkins2024offline,
+  author  = {Wilkins, Grant and Keshav, Srinivasan and Mortier, Richard},
+  title   = {Offline Energy-Optimal {LLM} Serving: Workload-Based Energy Models for {LLM} Inference on Heterogeneous Systems},
+  journal = {ACM SIGEnergy Energy Informatics Review},
+  volume  = {4},
+  number  = {5},
+  pages   = {113--119},
+  year    = {2024},
+  doi     = {10.1145/3727200.3727217},
+  eprint  = {2407.04014},
+  archivePrefix = {arXiv},
+  note    = {Presented at the 3rd ACM HotCarbon Workshop (HotCarbon '24)},
+  indexed = {peer-reviewed; indexing unverified}
+}
+
+@misc{stojkovic2024greener,
+  author  = {Stojkovic, Jovan and Choukse, Esha and Zhang, Chaojie and Goiri, {\'I}{\~n}igo and Torrellas, Josep},
+  title   = {Towards Greener {LLMs}: Bringing Energy-Efficiency to the Forefront of {LLM} Inference},
+  year    = {2024},
+  eprint  = {2403.20306},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  indexed = {preprint}
+}
+
+@inproceedings{stojkovic2025dynamollm,
+  author    = {Stojkovic, Jovan and Zhang, Chaojie and Goiri, {\'I}{\~n}igo and Torrellas, Josep and Choukse, Esha},
+  title     = {{DynamoLLM}: Designing {LLM} Inference Clusters for Performance and Energy Efficiency},
+  booktitle = {2025 IEEE International Symposium on High Performance Computer Architecture (HPCA)},
+  pages     = {1348--1362},
+  year      = {2025},
+  publisher = {IEEE},
+  doi       = {10.1109/HPCA61900.2025.00102},
+  eprint    = {2408.00741},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{fernandez2025energy,
+  author    = {Fernandez, Jared and Na, Clara and Tiwari, Vashisth and Bisk, Yonatan and Luccioni, Sasha and Strubell, Emma},
+  title     = {Energy Considerations of Large Language Model Inference and Efficiency Optimizations},
+  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {32556--32569},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2025.acl-long.1563},
+  eprint    = {2504.17674},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{you2023zeus,
+  author    = {You, Jie and Chung, Jae-Won and Chowdhury, Mosharaf},
+  title     = {Zeus: Understanding and Optimizing {GPU} Energy Consumption of {DNN} Training},
+  booktitle = {20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)},
+  year      = {2023},
+  publisher = {USENIX Association},
+  eprint    = {2208.06102},
+  archivePrefix = {arXiv},
+  note      = {Venue per arXiv comment and Semantic Scholar; no DOI},
+  indexed   = {peer-reviewed; indexing unverified}
+}
+
+@inproceedings{chung2025mlenergy,
+  author    = {Chung, Jae-Won and Ma, Jeff J. and Wu, Ruofan and Liu, Jiachen and Kweon, Oh Jun and Xia, Yuxuan and Wu, Zhiyu and Chowdhury, Mosharaf},
+  title     = {The {ML.ENERGY} Benchmark: Toward Automated Inference Energy Measurement and Optimization},
+  booktitle = {Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Datasets and Benchmarks Track},
+  pages     = {121191--121219},
+  year      = {2025},
+  doi       = {10.52202/085713-3652},
+  eprint    = {2505.06371},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@article{argerich2024measuring,
+  author  = {Argerich, Mauricio Fadel and Pati{\~n}o-Mart{\'i}nez, Marta},
+  title   = {Measuring and Improving the Energy Efficiency of Large Language Models Inference},
+  journal = {IEEE Access},
+  volume  = {12},
+  pages   = {80194--80207},
+  year    = {2024},
+  doi     = {10.1109/ACCESS.2024.3409745},
+  indexed = {scopus/wos likely}
+}
+
+@article{husom2025sustainable,
+  author  = {Husom, Erik Johannes and Goknil, Arda and Astekin, Merve and Shar, Lwin Khin and K{\aa}sen, Andre and Sen, Sagar and Mithassel, Benedikt Andreas and Soylu, Ahmet},
+  title   = {Sustainable {LLM} Inference for Edge {AI}: Evaluating Quantized {LLMs} for Energy Efficiency, Output Accuracy, and Inference Latency},
+  journal = {ACM Transactions on Internet of Things},
+  volume  = {6},
+  number  = {4},
+  pages   = {1--35},
+  year    = {2025},
+  doi     = {10.1145/3767742},
+  eprint  = {2504.03360},
+  archivePrefix = {arXiv},
+  indexed = {scopus/wos likely}
+}
+
+@inproceedings{niu2026tokenpowerbench,
+  author    = {Niu, Chenxu and Zhang, Wei and Li, Jie and Zhao, Yongjian and Wang, Tongyang and Wang, Xi and Chen, Yong},
+  title     = {{TokenPowerBench}: Benchmarking the Power Consumption of {LLM} Inference},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {40},
+  number    = {38},
+  pages     = {32582--32590},
+  year      = {2026},
+  doi       = {10.1609/aaai.v40i38.40535},
+  eprint    = {2512.03024},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{maliakel2026characterizing,
+  author    = {Maliakel, Paul Joe and Ilager, Shashikant and Brandic, Ivona},
+  title     = {Characterizing {LLM} Inference Energy-Performance Tradeoffs Across Workloads and {GPU} Scaling},
+  booktitle = {2026 IEEE 26th International Symposium on Cluster, Cloud and Internet Computing (CCGrid)},
+  pages     = {33--43},
+  year      = {2026},
+  publisher = {IEEE},
+  doi       = {10.1109/CCGrid68966.2026.00013},
+  eprint    = {2501.08219},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{plestina2026energy,
+  author    = {Ple{\v s}tina, Vladimir and Bo{\v z}i{\'c}-{\v S}tuli{\'c}, Dunja and {\v C}elar, Stipo and Vickovi{\'c}, Linda},
+  title     = {Energy Efficiency of Local Large Language Model Inference: A Multi-{GPU} Benchmark Study on Consumer Hardware},
+  booktitle = {2026 11th International Conference on Smart and Sustainable Technologies (SpliTech)},
+  pages     = {1--6},
+  year      = {2026},
+  publisher = {IEEE},
+  doi       = {10.23919/SpliTech70133.2026.11685449},
+  indexed   = {scopus/wos likely}
+}
+
+@misc{zahl2026energy,
+  author  = {Z{\"a}hl, Philipp M. and Hennig, Anika},
+  title   = {Energy Efficiency of Locally Deployed {LLMs}: A Preliminary Quantitative {GPU} Power Benchmark on Consumer Hardware},
+  year    = {2026},
+  eprint  = {2608.00008},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{vellaisamy2026request,
+  author  = {Vellaisamy, Prabhu and Lam, Vanessa and Blanton, Shawn and Shen, John Paul},
+  title   = {Characterization of Request and Token Energy Costs for {LLM} Inference Workloads on {GPU} Platforms},
+  year    = {2026},
+  eprint  = {2608.28044},
+  archivePrefix = {arXiv},
+  note    = {Accepted at IEEE IISWC 2026 (per arXiv comment)},
+  indexed = {preprint}
+}
+
+@misc{stuhlmann2025bench360,
+  author  = {Stuhlmann, Linus and Argerich, Mauricio Fadel and F{\"u}rst, Jonathan},
+  title   = {{Bench360}: Benchmarking Local {LLM} Inference from 360 Degrees},
+  year    = {2025},
+  eprint  = {2511.16682},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+% ======================================================================
+% 2. GPU power / energy measurement methodology
+% ======================================================================
+
+@inproceedings{yang2024accurate,
+  author    = {Yang, Zeyu and Adamek, Karel and Armour, Wesley},
+  title     = {Accurate and Convenient Energy Measurements for {GPUs}: A Detailed Study of {NVIDIA} {GPU}'s Built-In Power Sensor},
+  booktitle = {SC24: International Conference for High Performance Computing, Networking, Storage and Analysis},
+  pages     = {1--17},
+  year      = {2024},
+  publisher = {IEEE},
+  doi       = {10.1109/SC41406.2024.00028},
+  eprint    = {2312.02741},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{burtscher2014measuring,
+  author    = {Burtscher, Martin and Zecena, Ivan and Zong, Ziliang},
+  title     = {Measuring {GPU} Power with the {K20} Built-in Sensor},
+  booktitle = {Proceedings of Workshop on General Purpose Processing Using GPUs (GPGPU-7)},
+  pages     = {28--36},
+  year      = {2014},
+  publisher = {ACM},
+  doi       = {10.1145/2576779.2576783},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{jay2023experimental,
+  author    = {Jay, Mathilde and Ostapenco, Vladimir and Lefevre, Laurent and Trystram, Denis and Orgerie, Anne-C{\'e}cile and Fichel, Benjamin},
+  title     = {An Experimental Comparison of Software-Based Power Meters: Focus on {CPU} and {GPU}},
+  booktitle = {2023 IEEE/ACM 23rd International Symposium on Cluster, Cloud and Internet Computing (CCGrid)},
+  pages     = {106--118},
+  year      = {2023},
+  publisher = {IEEE},
+  doi       = {10.1109/CCGrid57682.2023.00020},
+  indexed   = {scopus/wos likely}
+}
+
+@article{bouza2023estimate,
+  author  = {Bouza, Luc{\'i}a and Bugeau, Aur{\'e}lie and Lannelongue, Lo{\"i}c},
+  title   = {How to Estimate Carbon Footprint when Training Deep Learning Models? {A} Guide and Review},
+  journal = {Environmental Research Communications},
+  volume  = {5},
+  number  = {11},
+  pages   = {115014},
+  year    = {2023},
+  doi     = {10.1088/2515-7620/acf81b},
+  indexed = {scopus/wos likely}
+}
+
+@misc{codecarbon2026,
+  author  = {Courty, Beno{\^i}t and Schmidt, Victor and others},
+  title   = {{mlco2/codecarbon}},
+  year    = {2026},
+  version = {3.3.1},
+  publisher = {Zenodo},
+  howpublished = {Software, Zenodo},
+  doi     = {10.5281/zenodo.4658424},
+  note    = {Concept DOI (DataCite); resolves to the latest release, v3.3.1 at access time 2026-09-23},
+  indexed = {software}
+}
+
+% ======================================================================
+% 3. LLM quantization and quality evaluation
+% ======================================================================
+
+@inproceedings{dettmers2022llmint8,
+  author    = {Dettmers, Tim and Lewis, Mike and Belkada, Younes and Zettlemoyer, Luke},
+  title     = {{LLM.int8()}: 8-bit Matrix Multiplication for Transformers at Scale},
+  booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
+  pages     = {30318--30332},
+  year      = {2022},
+  doi       = {10.52202/068431-2198},
+  eprint    = {2208.07339},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{frantar2023gptq,
+  author    = {Frantar, Elias and Ashkboos, Saleh and Hoefler, Torsten and Alistarh, Dan},
+  title     = {{GPTQ}: Accurate Post-Training Quantization for Generative Pre-trained Transformers},
+  booktitle = {The Eleventh International Conference on Learning Representations (ICLR 2023)},
+  year      = {2023},
+  eprint    = {2210.17323},
+  archivePrefix = {arXiv},
+  note      = {Venue per arXiv comment ("ICLR 2023"); published on OpenReview, no DOI},
+  indexed   = {peer-reviewed; indexing unverified}
+}
+
+@inproceedings{xiao2023smoothquant,
+  author    = {Xiao, Guangxuan and Lin, Ji and Seznec, Mickael and Wu, Hao and Demouth, Julien and Han, Song},
+  title     = {{SmoothQuant}: Accurate and Efficient Post-Training Quantization for Large Language Models},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML 2023)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {202},
+  year      = {2023},
+  eprint    = {2211.10438},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{dettmers2023case,
+  author    = {Dettmers, Tim and Zettlemoyer, Luke},
+  title     = {The Case for 4-bit Precision: k-bit Inference Scaling Laws},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML 2023)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {202},
+  pages     = {7750--7774},
+  year      = {2023},
+  eprint    = {2212.09720},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{dettmers2023qlora,
+  author    = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
+  title     = {{QLoRA}: Efficient Finetuning of Quantized {LLMs}},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  pages     = {10088--10115},
+  year      = {2023},
+  doi       = {10.52202/075280-0441},
+  eprint    = {2305.14314},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{lin2024awq,
+  author    = {Lin, Ji and Tang, Jiaming and Tang, Haotian and Yang, Shang and Chen, Wei-Ming and Wang, Wei-Chen and Xiao, Guangxuan and Dang, Xingyu and Gan, Chuang and Han, Song},
+  title     = {{AWQ}: Activation-aware Weight Quantization for On-Device {LLM} Compression and Acceleration},
+  booktitle = {Proceedings of Machine Learning and Systems (MLSys 2024)},
+  volume    = {6},
+  year      = {2024},
+  eprint    = {2306.00978},
+  archivePrefix = {arXiv},
+  note      = {MLSys 2024 Best Paper (per arXiv comment). A short version is in GetMobile: Mobile Computing and Communications 28(4):12--17, 2025, doi:10.1145/3714983.3714987 (Crossref-verified, 6 authors)},
+  indexed   = {peer-reviewed; indexing unverified}
+}
+
+@article{huang2024llama3quant,
+  author  = {Huang, Wei and Zheng, Xingyu and Ma, Xudong and Qin, Haotong and Lv, Chengtao and Chen, Hong and Luo, Jie and Qi, Xiaojuan and Liu, Xianglong and Magno, Michele},
+  title   = {An Empirical Study of {LLaMA3} Quantization: From {LLMs} to {MLLMs}},
+  journal = {Visual Intelligence},
+  volume  = {2},
+  year    = {2024},
+  doi     = {10.1007/s44267-024-00070-x},
+  eprint  = {2404.14047},
+  archivePrefix = {arXiv},
+  note    = {arXiv v1 title: "How Good Are Low-bit Quantized LLaMA3 Models? An Empirical Study"},
+  indexed = {peer-reviewed; indexing unverified}
+}
+
+@inproceedings{li2024evaluating,
+  author    = {Li, Shiyao and Ning, Xuefei and Wang, Luning and Liu, Tengxuan and Shi, Xiangsheng and Yan, Shengen and Dai, Guohao and Yang, Huazhong and Wang, Yu},
+  title     = {Evaluating Quantized Large Language Models},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML 2024)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {235},
+  pages     = {28480--28524},
+  year      = {2024},
+  eprint    = {2402.18158},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{jin2024comprehensive,
+  author    = {Jin, Renren and Du, Jiangcun and Huang, Wuwei and Liu, Wei and Luan, Jian and Wang, Bin and Xiong, Deyi},
+  title     = {A Comprehensive Evaluation of Quantization Strategies for Large Language Models},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},
+  pages     = {12186--12215},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2024.findings-acl.726},
+  eprint    = {2402.16775},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{kurtic2025bf16,
+  author    = {Kurtic, Eldar and Marques, Alexandre Noll and Pandit, Shubhra and Kurtz, Mark and Alistarh, Dan},
+  title     = {``{Give} Me {BF16} or Give Me Death''? {Accuracy}-Performance Trade-Offs in {LLM} Quantization},
+  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {26872--26886},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2025.acl-long.1304},
+  eprint    = {2411.02355},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{dutta2024accuracy,
+  author    = {Dutta, Abhinav and Krishnan, Sanjeev and Kwatra, Nipun and Ramjee, Ramachandran},
+  title     = {Accuracy is Not All You Need},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
+  pages     = {124347--124390},
+  year      = {2024},
+  doi       = {10.52202/079017-3950},
+  eprint    = {2407.09141},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{marchisio2024quantization,
+  author    = {Marchisio, Kelly and Dash, Saurabh and Chen, Hongyu and Aumiller, Dennis and {\"U}st{\"u}n, Ahmet and Hooker, Sara and Ruder, Sebastian},
+  title     = {How Does Quantization Affect Multilingual {LLMs}?},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages     = {15928--15947},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2024.findings-emnlp.935},
+  eprint    = {2407.03211},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{iakovenko2025comparing,
+  author    = {Iakovenko, Maksym and Dupont, St{\'e}phane},
+  title     = {Comparing Modern {LLM} Quantization Methods Across Natural Languages},
+  booktitle = {Proceedings of the 33rd European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning (ESANN 2025)},
+  pages     = {663--668},
+  year      = {2025},
+  publisher = {i6doc.com},
+  isbn      = {9782875870933},
+  doi       = {10.14428/esann/2025.es2025-190},
+  indexed   = {scopus/wos likely}
+}
+
+@misc{marie2025uneven,
+  author  = {Marie, Benjamin and Fujita, Atsushi},
+  title   = {The Uneven Impact of Post-Training Quantization in Machine Translation},
+  year    = {2025},
+  eprint  = {2508.20893},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{soualhi2026tax,
+  author  = {Soualhi, Mohammad Wathiq},
+  title   = {The Multilingual Quantization Tax: Structural Collapse and Typological Fragility in Edge {SLMs}},
+  year    = {2026},
+  eprint  = {2608.09941},
+  archivePrefix = {arXiv},
+  note    = {Under review at EMNLP 2026 (per arXiv comment)},
+  indexed = {preprint}
+}
+
+@misc{kurt2026which,
+  author  = {Kurt, Uygar},
+  title   = {Which Quantization Should {I} Use? {A} Unified Evaluation of llama.cpp Quantization on {Llama-3.1-8B-Instruct}},
+  year    = {2026},
+  eprint  = {2601.14277},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{qamar2026accuracy,
+  author  = {Qamar, Shahzeb and Sparrenberg, Lorenz and Bauckhage, Christian and Rababah, Baha and Leung, Carson and Kantarcioglu, Murat and Akcora, Cuneyt Gurcan and Sifa, Rafet},
+  title   = {Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized {LLMs}},
+  year    = {2026},
+  eprint  = {2609.07664},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@article{tatarnikova2025distillation,
+  author  = {Tatarnikova, T. M. and Mokretsov, N. S.},
+  title   = {Optimizing Knowledge Distillation Models for Language Models},
+  journal = {Scientific and Technical Journal of Information Technologies, Mechanics and Optics},
+  volume  = {25},
+  number  = {4},
+  pages   = {737--743},
+  year    = {2025},
+  doi     = {10.17586/2226-1494-2025-25-4-737-743},
+  indexed = {scopus/wos likely}
+}
+
+% ======================================================================
+% 4. LLM inference on consumer / edge hardware; memory-bound decoding; offloading
+% ======================================================================
+
+@article{williams2009roofline,
+  author  = {Williams, Samuel and Waterman, Andrew and Patterson, David},
+  title   = {Roofline: An Insightful Visual Performance Model for Multicore Architectures},
+  journal = {Communications of the ACM},
+  volume  = {52},
+  number  = {4},
+  pages   = {65--76},
+  year    = {2009},
+  doi     = {10.1145/1498765.1498785},
+  indexed = {scopus/wos likely}
+}
+
+@inproceedings{patel2024splitwise,
+  author    = {Patel, Pratyush and Choukse, Esha and Zhang, Chaojie and Shah, Aashaka and Goiri, {\'I}{\~n}igo and Maleki, Saeed and Bianchini, Ricardo},
+  title     = {Splitwise: Efficient Generative {LLM} Inference Using Phase Splitting},
+  booktitle = {2024 ACM/IEEE 51st Annual International Symposium on Computer Architecture (ISCA)},
+  pages     = {118--132},
+  year      = {2024},
+  publisher = {IEEE},
+  doi       = {10.1109/ISCA59077.2024.00019},
+  eprint    = {2311.18677},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{sheng2023flexgen,
+  author    = {Sheng, Ying and Zheng, Lianmin and Yuan, Binhang and Li, Zhuohan and Ryabinin, Max and Fu, Daniel Y. and Xie, Zhiqiang and Chen, Beidi and Barrett, Clark and Gonzalez, Joseph E. and Liang, Percy and R{\'e}, Christopher and Stoica, Ion and Zhang, Ce},
+  title     = {{FlexGen}: High-Throughput Generative Inference of Large Language Models with a Single {GPU}},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML 2023)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {202},
+  pages     = {31094--31116},
+  year      = {2023},
+  eprint    = {2303.06865},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{song2024powerinfer,
+  author    = {Song, Yixin and Mi, Zeyu and Xie, Haotong and Chen, Haibo},
+  title     = {{PowerInfer}: Fast Large Language Model Serving with a Consumer-grade {GPU}},
+  booktitle = {Proceedings of the ACM SIGOPS 30th Symposium on Operating Systems Principles (SOSP '24)},
+  pages     = {590--606},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3694715.3695964},
+  eprint    = {2312.12456},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{laskaridis2024melt,
+  author    = {Laskaridis, Stefanos and Katevas, Kleomenis and Minto, Lorenzo and Haddadi, Hamed},
+  title     = {{MELTing} Point: Mobile Evaluation of Language Transformers},
+  booktitle = {Proceedings of the 30th Annual International Conference on Mobile Computing and Networking (MobiCom '24)},
+  pages     = {890--907},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3636534.3690668},
+  eprint    = {2403.12844},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@article{wang2025slm,
+  author  = {Wang, Fali and Zhang, Zhiwei and Zhang, Xianren and Wu, Zongyu and Mo, TzuHao and Lu, Qiuhao and Wang, Wanjing and Li, Rui and Xu, Junjie and Tang, Xianfeng and He, Qi and Ma, Yao and Huang, Ming and Wang, Suhang},
+  title   = {A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with {LLMs}, and Trustworthiness},
+  journal = {ACM Transactions on Intelligent Systems and Technology},
+  volume  = {16},
+  number  = {6},
+  pages   = {1--87},
+  year    = {2025},
+  doi     = {10.1145/3768165},
+  eprint  = {2411.03350},
+  archivePrefix = {arXiv},
+  indexed = {scopus/wos likely}
+}
+
+@misc{taherin2026hydra,
+  author  = {Taherin, Amir and Anvari, Sana Taghipour and Amante, Charles and Chen, Yixiao and Noroian, Ruben and Feric, Zlatan and Agostini, Nicolas Bohm and Zhao, Pu and Cano, Jos{\'e} and Ren, Bin and Wang, Yanzhi and Kaeli, David},
+  title   = {Hydra: Phase-Aware Workload Characterization of {LLM} Inference across Edge {SoC} Generations, Backends, and Quantization Levels},
+  year    = {2026},
+  eprint  = {2608.25053},
+  archivePrefix = {arXiv},
+  note    = {Accepted at IEEE IISWC 2026 (per arXiv comment)},
+  indexed = {preprint}
+}
+
+@misc{ukarande2026vram,
+  author  = {Ukarande, Aditya and Shekhar, Deep and Blackstein, Marc and Rangan, Ram},
+  title   = {Efficient, {VRAM}-Constrained {xLM} Inference on Clients},
+  year    = {2026},
+  eprint  = {2604.26334},
+  archivePrefix = {arXiv},
+  note    = {Accepted at MLSys 2026 Industry Track (per arXiv comment)},
+  indexed = {preprint}
+}
+
+@misc{javat2026silicon,
+  author  = {Javat, Abdurrahman and Kazakov, Allan},
+  title   = {Silicon Showdown: Performance, Efficiency, and Ecosystem Barriers in Consumer-Grade {LLM} Inference},
+  year    = {2026},
+  eprint  = {2605.00519},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{licardo2025ecommerce,
+  author  = {Licardo, Josip Tomo and Tankovic, Nikola},
+  title   = {Performance Trade-offs of Optimizing Small Language Models for E-Commerce},
+  year    = {2025},
+  eprint  = {2510.21970},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{gerganov2026llamacpp,
+  author  = {Gerganov, Georgi and {llama.cpp contributors}},
+  title   = {llama.cpp: {LLM} Inference in {C/C++}},
+  year    = {2026},
+  howpublished = {Software, GitHub},
+  url     = {https://github.com/ggml-org/llama.cpp},
+  urldate = {2026-09-23},
+  note    = {Record the exact build/commit used in the experiments},
+  indexed = {software}
+}
+
+% ======================================================================
+% 5. Economics, cost of inference, self-hosting vs API, tokenization cost
+% ======================================================================
+
+@article{chen2024frugalgpt,
+  author  = {Chen, Lingjiao and Zaharia, Matei and Zou, James},
+  title   = {{FrugalGPT}: How to Use Large Language Models While Reducing Cost and Improving Performance},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2024},
+  eprint  = {2305.05176},
+  archivePrefix = {arXiv},
+  note    = {TMLR venue per Semantic Scholar/DBLP record (journals/tmlr/ChenZ024)},
+  indexed = {peer-reviewed; indexing unverified}
+}
+
+@inproceedings{irugalbandara2024scaling,
+  author    = {Irugalbandara, Chandra and Mahendra, Ashish and Daynauth, Roland and Arachchige, Tharuka Kasthuri and Dantanarayana, Jayanaka and Flautner, Krisztian and Tang, Lingjia and Kang, Yiping and Mars, Jason},
+  title     = {Scaling Down to Scale Up: A Cost-Benefit Analysis of Replacing {OpenAI}'s {LLM} with Open Source {SLMs} in Production},
+  booktitle = {2024 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)},
+  pages     = {280--291},
+  year      = {2024},
+  publisher = {IEEE},
+  doi       = {10.1109/ISPASS61541.2024.00034},
+  eprint    = {2312.14972},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{mohammad2026economically,
+  author    = {Mohammad, Abdullah and Ray, Sushant Kumar and Arora, Pushkar and Ali, Rafiq and Shabbir, Ebad and Kashyap, Gautam Siddharth and Gao, Jiechao and Naseem, Usman},
+  title     = {Are Large Language Models Economically Viable for Industry Deployment?},
+  booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 6: Industry Track)},
+  pages     = {1533--1540},
+  year      = {2026},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2026.acl-industry.106},
+  eprint    = {2604.19342},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{ahia2023cost,
+  author    = {Ahia, Orevaoghene and Kumar, Sachin and Gonen, Hila and Kasai, Jungo and Mortensen, David and Smith, Noah and Tsvetkov, Yulia},
+  title     = {Do All Languages Cost the Same? {Tokenization} in the Era of Commercial Language Models},
+  booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing},
+  pages     = {9904--9923},
+  year      = {2023},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2023.emnlp-main.614},
+  eprint    = {2305.13707},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{petrov2023tokenizers,
+  author    = {Petrov, Aleksandar and La Malfa, Emanuele and Torr, Philip and Bibi, Adel},
+  title     = {Language Model Tokenizers Introduce Unfairness Between Languages},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  pages     = {36963--36990},
+  year      = {2023},
+  doi       = {10.52202/075280-1608},
+  eprint    = {2305.15425},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@misc{pan2025costbenefit,
+  author  = {Pan, Guanzhong and Chodnekar, Vishal and Roy, Abinas and Wang, Haibo},
+  title   = {A Cost-Benefit Analysis of On-Premise Large Language Model Deployment: Breaking Even with Commercial {LLM} Services},
+  year    = {2025},
+  eprint  = {2509.18101},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{knoop2026private,
+  author  = {Knoop, Jonathan and Holtmann, Hendrik},
+  title   = {Private {LLM} Inference on Consumer {Blackwell} {GPUs}: A Practical Guide for Cost-Effective Local Deployment in {SMEs}},
+  year    = {2026},
+  eprint  = {2601.09527},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{patil2026beyond,
+  author  = {Patil, Chitral},
+  title   = {Beyond Per-Token Pricing: A Concurrency-Aware Methodology for {LLM} Infrastructure Cost Estimation},
+  year    = {2026},
+  eprint  = {2606.11690},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{cao2026dumpster,
+  author  = {Cao, Zeyu and Guo, Xuan and Zhang, Cheng and Lau, Cheuk Hang and Shumailov, Ilia and Zhao, Yiren},
+  title   = {{DumpsterCluster}: From Dumpster Diving to Serving {LLaMA-70B} on \$60 {GPUs}},
+  year    = {2026},
+  eprint  = {2608.14614},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+% ======================================================================
+% 6. Russian-language LLMs and evaluation
+% ======================================================================
+
+@inproceedings{fenogenova2024mera,
+  author    = {Fenogenova, Alena and Chervyakov, Artem and Martynov, Nikita and Kozlova, Anastasia and Tikhonova, Maria and Akhmetgareeva, Albina and Emelyanov, Anton and Shevelev, Denis and others},
+  title     = {{MERA}: A Comprehensive {LLM} Evaluation in {Russian}},
+  booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {9920--9948},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2024.acl-long.534},
+  eprint    = {2401.04531},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{shavrina2020russiansuperglue,
+  author    = {Shavrina, Tatiana and Fenogenova, Alena and Emelyanov, Anton and Shevelev, Denis and Artemova, Ekaterina and Malykh, Valentin and Mikhailov, Vladislav and Tikhonova, Maria and Chertok, Andrey and Evlampiev, Andrey},
+  title     = {{RussianSuperGLUE}: A {Russian} Language Understanding Evaluation Benchmark},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages     = {4717--4726},
+  year      = {2020},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2020.emnlp-main.381},
+  eprint    = {2010.15925},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{blinov2022rumedbench,
+  author    = {Blinov, Pavel and Reshetnikova, Arina and Nesterov, Aleksandr and Zubkova, Galina and Kokh, Vladimir},
+  title     = {{RuMedBench}: A {Russian} Medical Language Understanding Benchmark},
+  booktitle = {Artificial Intelligence in Medicine (AIME 2022)},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {383--392},
+  year      = {2022},
+  publisher = {Springer},
+  doi       = {10.1007/978-3-031-09342-5_38},
+  eprint    = {2201.06499},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{mamedov2025gigachat,
+  author    = {Mamedov, Valentin and Kosarev, Evgenii and Leleytner, Gregory and Shchuckin, Ilya and Berezovskiy, Valeriy and Smirnov, Daniil and Kozlov, Dmitry and Averkiev, Sergei and others},
+  title     = {{GigaChat} Family: Efficient {Russian} Language Modeling Through Mixture of Experts Architecture},
+  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)},
+  pages     = {93--106},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2025.acl-demo.10},
+  eprint    = {2506.09440},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{nikolich2024vikhr,
+  author    = {Nikolich, Aleksandr and Korolev, Konstantin and Bratchikov, Sergei and Kiselev, Igor and Shelmanov, Artem},
+  title     = {Vikhr: Constructing a State-of-the-art Bilingual Open-Source Instruction-Following Large Language Model for {Russian}},
+  booktitle = {Proceedings of the Fourth Workshop on Multilingual Representation Learning (MRL 2024)},
+  pages     = {189--199},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2024.mrl-1.15},
+  eprint    = {2405.13929},
+  archivePrefix = {arXiv},
+  indexed   = {scopus/wos likely}
+}
+
+@article{tikhomirov2024lep,
+  author  = {Tikhomirov, Mikhail and Chernyshov, Daniil},
+  title   = {Facilitating Large Language Model {Russian} Adaptation with Learned Embedding Propagation},
+  journal = {Journal of Language and Education},
+  volume  = {10},
+  number  = {4},
+  pages   = {130--145},
+  year    = {2024},
+  doi     = {10.17323/jle.2024.22224},
+  eprint  = {2412.21140},
+  archivePrefix = {arXiv},
+  indexed = {scopus/wos likely}
+}
+
+@misc{baturova2026little,
+  author  = {Baturova, Dari and Bruches, Elena and Chernov, Ivan and Derunets, Roman and Fomin, Arsenii and Kostin, Andrey},
+  title   = {Little Brains, Big Feats: Exploring Compact Language Models},
+  year    = {2026},
+  eprint  = {2606.30062},
+  archivePrefix = {arXiv},
+  note    = {Accepted to ECML PKDD 2026, Applied Data Science track; to appear in Springer LNCS (per arXiv comment)},
+  indexed = {preprint}
+}
+
+% ======================================================================
+% 7. Models evaluated (technical reports)
+% ======================================================================
+
+@misc{yang2025qwen3,
+  author  = {Yang, An and Li, Anfeng and Yang, Baosong and Zhang, Beichen and Hui, Binyuan and Zheng, Bo and Yu, Bowen and Gao, Chang and others},
+  title   = {{Qwen3} Technical Report},
+  year    = {2025},
+  eprint  = {2505.09388},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{gemmateam2025gemma3,
+  author  = {{Gemma Team} and Kamath, Aishwarya and Ferret, Johan and Pathak, Shreya and Vieillard, Nino and others},
+  title   = {{Gemma} 3 Technical Report},
+  year    = {2025},
+  eprint  = {2503.19786},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@misc{grattafiori2024llama3,
+  author  = {Grattafiori, Aaron and Dubey, Abhimanyu and Jauhri, Abhinav and Pandey, Abhinav and Kadian, Abhishek and others},
+  title   = {The {Llama} 3 Herd of Models},
+  year    = {2024},
+  eprint  = {2407.21783},
+  archivePrefix = {arXiv},
+  indexed = {preprint}
+}
+
+@inproceedings{singh2025globalmmlu,
+  author    = {Singh, Shivalika and Romanou, Angelika and Fourrier, Cl{\'e}mentine and others},
+  title     = {Global {MMLU}: Understanding and Addressing Cultural and Linguistic Biases in Multilingual Evaluation},
+  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {18761--18799},
+  year      = {2025},
+  doi       = {10.18653/v1/2025.acl-long.919},
+  indexed   = {scopus/wos likely}
+}
+
+@inproceedings{bojar2018findings,
+  author    = {Bojar, Ond{\v{r}}ej and Federmann, Christian and Fishel, Mark and others},
+  title     = {Findings of the 2018 Conference on Machine Translation ({WMT18})},
+  booktitle = {Proceedings of the Third Conference on Machine Translation: Shared Task Papers},
+  pages     = {272--303},
+  year      = {2018},
+  doi       = {10.18653/v1/W18-6401},
+  indexed   = {scopus/wos likely}
+}

@@ -1,0 +1,63 @@
+[qwen3.5-0.8b/F16 ngl=99 pp] median 0.0131 J/tok (min 0.0128, max 0.0133); 5214.8 tok/s; power 68.8 W; VRAM 2127 MiB; CPU 29%; trace/counter 1.054
+[qwen3.5-0.8b/F16 ngl=99 tg] median 0.7757 J/tok (min 0.7637, max 0.7808); 88.0 tok/s; power 66.6 W; VRAM 2127 MiB; CPU 28%; trace/counter 0.985
+idle GPU power: empty 29.5 W, model loaded 29.8 W
+[qwen3.5-0.8b/Q8_0 ngl=99 pp] median 0.0140 J/tok (min 0.0136, max 0.0141); 4904.5 tok/s; power 65.2 W; VRAM 1433 MiB; CPU 29%; trace/counter 0.993
+[qwen3.5-0.8b/Q8_0 ngl=99 tg] median 0.4569 J/tok (min 0.4565, max 0.4656); 148.9 tok/s; power 66.9 W; VRAM 1433 MiB; CPU 28%; trace/counter 0.988
+idle GPU power: empty 21.5 W, model loaded 29.5 W
+[qwen3.5-0.8b/Q6_K ngl=99 pp] median 0.0147 J/tok (min 0.0143, max 0.0147); 4660.7 tok/s; power 65.3 W; VRAM 1261 MiB; CPU 29%; trace/counter 0.993
+[qwen3.5-0.8b/Q6_K ngl=99 tg] median 0.4395 J/tok (min 0.4372, max 0.4449); 154.5 tok/s; power 66.6 W; VRAM 1261 MiB; CPU 28%; trace/counter 0.991
+idle GPU power: empty 30.9 W, model loaded 29.6 W
+[qwen3.5-0.8b/Q5_K_M ngl=99 pp] median 0.0144 J/tok (min 0.0142, max 0.0144); 4761.8 tok/s; power 65.3 W; VRAM 1211 MiB; CPU 29%; trace/counter 0.991
+[qwen3.5-0.8b/Q5_K_M ngl=99 tg] median 0.4030 J/tok (min 0.4015, max 0.4062); 169.0 tok/s; power 66.5 W; VRAM 1211 MiB; CPU 28%; trace/counter 0.988
+idle GPU power: empty 30.9 W, model loaded 29.7 W
+[qwen3.5-0.8b/Q4_K_M ngl=99 pp] median 0.0141 J/tok (min 0.0140, max 0.0143); 4824.0 tok/s; power 65.1 W; VRAM 1165 MiB; CPU 29%; trace/counter 0.990
+[qwen3.5-0.8b/Q4_K_M ngl=99 tg] median 0.3891 J/tok (min 0.3842, max 0.3943); 174.7 tok/s; power 66.7 W; VRAM 1165 MiB; CPU 28%; trace/counter 0.995
+idle GPU power: empty 30.8 W, model loaded 29.7 W
+[qwen3.5-0.8b/Q3_K_M ngl=99 pp] median 0.0147 J/tok (min 0.0144, max 0.0147); 4666.6 tok/s; power 65.3 W; VRAM 1105 MiB; CPU 29%; trace/counter 0.992
+[qwen3.5-0.8b/Q3_K_M ngl=99 tg] median 0.4010 J/tok (min 0.3949, max 0.4066); 169.4 tok/s; power 66.7 W; VRAM 1105 MiB; CPU 28%; trace/counter 0.993
+idle GPU power: empty 31.0 W, model loaded 29.6 W
+[qwen3.5-0.8b/Q2_K ngl=99 pp] median 0.0155 J/tok (min 0.0154, max 0.0157); 4388.2 tok/s; power 64.9 W; VRAM 1063 MiB; CPU 29%; trace/counter 0.985
+[qwen3.5-0.8b/Q2_K ngl=99 tg] median 0.3811 J/tok (min 0.3808, max 0.3859); 178.4 tok/s; power 66.4 W; VRAM 1063 MiB; CPU 28%; trace/counter 0.988
+idle GPU power: empty 30.6 W, model loaded 29.7 W
+[qwen3.5-2b/F16 ngl=99 pp] median 0.0205 J/tok (min 0.0200, max 0.0208); 3338.7 tok/s; power 66.1 W; VRAM 4283 MiB; CPU 29%; trace/counter 0.990
+[qwen3.5-2b/F16 ngl=99 tg] median 1.1711 J/tok (min 1.1586, max 1.1816); 57.5 tok/s; power 66.5 W; VRAM 4283 MiB; CPU 29%; trace/counter 0.994
+idle GPU power: empty 30.8 W, model loaded 29.5 W
+[qwen3.5-2b/Q8_0 ngl=99 pp] median 0.0221 J/tok (min 0.0218, max 0.0224); 3049.3 tok/s; power 65.5 W; VRAM 2583 MiB; CPU 29%; trace/counter 0.993
+[qwen3.5-2b/Q8_0 ngl=99 tg] median 0.8007 J/tok (min 0.7976, max 0.8102); 84.6 tok/s; power 66.4 W; VRAM 2583 MiB; CPU 29%; trace/counter 0.983
+idle GPU power: empty 22.0 W, model loaded 29.7 W
+[qwen3.5-2b/Q6_K ngl=99 pp] median 0.0239 J/tok (min 0.0238, max 0.0242); 2819.7 tok/s; power 65.2 W; VRAM 2147 MiB; CPU 29%; trace/counter 0.986
+[qwen3.5-2b/Q6_K ngl=99 tg] median 0.8107 J/tok (min 0.7874, max 0.8184); 83.6 tok/s; power 66.3 W; VRAM 2147 MiB; CPU 29%; trace/counter 0.988
+idle GPU power: empty 25.7 W, model loaded 29.7 W
+[qwen3.5-2b/Q5_K_M ngl=99 pp] median 0.0232 J/tok (min 0.0230, max 0.0237); 2900.7 tok/s; power 65.6 W; VRAM 2009 MiB; CPU 29%; trace/counter 0.989
+[qwen3.5-2b/Q5_K_M ngl=99 tg] median 0.7063 J/tok (min 0.6859, max 0.7076); 96.6 tok/s; power 66.7 W; VRAM 2009 MiB; CPU 29%; trace/counter 0.993
+idle GPU power: empty 30.8 W, model loaded 29.8 W
+[qwen3.5-2b/Q4_K_M ngl=99 pp] median 0.0228 J/tok (min 0.0225, max 0.0231); 2959.8 tok/s; power 65.5 W; VRAM 1879 MiB; CPU 29%; trace/counter 0.987
+[qwen3.5-2b/Q4_K_M ngl=99 tg] median 0.6641 J/tok (min 0.6564, max 0.6730); 100.8 tok/s; power 65.1 W; VRAM 1879 MiB; CPU 29%; trace/counter 0.977
+idle GPU power: empty 30.3 W, model loaded 29.7 W
+[qwen3.5-2b/Q3_K_M ngl=99 pp] median 0.0241 J/tok (min 0.0235, max 0.0242); 2813.2 tok/s; power 65.7 W; VRAM 1711 MiB; CPU 29%; trace/counter 0.991
+[qwen3.5-2b/Q3_K_M ngl=99 tg] median 0.7206 J/tok (min 0.7101, max 0.7322); 94.0 tok/s; power 66.3 W; VRAM 1711 MiB; CPU 28%; trace/counter 0.987
+idle GPU power: empty 30.3 W, model loaded 30.0 W
+[qwen3.5-2b/Q2_K ngl=99 pp] median 0.0276 J/tok (min 0.0268, max 0.0277); 2478.4 tok/s; power 65.8 W; VRAM 1587 MiB; CPU 29%; trace/counter 0.986
+[qwen3.5-2b/Q2_K ngl=99 tg] median 0.6755 J/tok (min 0.6671, max 0.6791); 99.9 tok/s; power 65.6 W; VRAM 1587 MiB; CPU 28%; trace/counter 0.984
+idle GPU power: empty 30.6 W, model loaded 29.7 W
+[qwen3.5-4b/F16 ngl=99 pp] median 0.0490 J/tok (min 0.0467, max 0.0498); 1394.3 tok/s; power 66.4 W; VRAM 8817 MiB; CPU 29%; trace/counter 0.992
+[qwen3.5-4b/F16 ngl=99 tg] median 2.5881 J/tok (min 2.5808, max 2.5917); 26.3 tok/s; power 66.5 W; VRAM 8817 MiB; CPU 29%; trace/counter 0.995
+idle GPU power: empty 31.0 W, model loaded 29.5 W
+[qwen3.5-4b/Q8_0 ngl=99 pp] median 0.0508 J/tok (min 0.0499, max 0.0517); 1311.3 tok/s; power 65.2 W; VRAM 5035 MiB; CPU 29%; trace/counter 0.987
+[qwen3.5-4b/Q8_0 ngl=99 tg] median 1.6906 J/tok (min 1.6791, max 1.6980); 40.6 tok/s; power 66.3 W; VRAM 5035 MiB; CPU 29%; trace/counter 0.989
+idle GPU power: empty 20.4 W, model loaded 29.6 W
+[qwen3.5-4b/Q6_K ngl=99 pp] median 0.0560 J/tok (min 0.0545, max 0.0569); 1195.4 tok/s; power 65.0 W; VRAM 4063 MiB; CPU 29%; trace/counter 0.982
+[qwen3.5-4b/Q6_K ngl=99 tg] median 1.8521 J/tok (min 1.7537, max 1.9084); 37.4 tok/s; power 67.3 W; VRAM 4063 MiB; CPU 29%; trace/counter 0.994
+idle GPU power: empty 25.1 W, model loaded 29.6 W
+[qwen3.5-4b/Q5_K_M ngl=99 pp] median 0.0541 J/tok (min 0.0524, max 0.0547); 1236.7 tok/s; power 64.8 W; VRAM 3693 MiB; CPU 29%; trace/counter 0.981
+[qwen3.5-4b/Q5_K_M ngl=99 tg] median 1.4565 J/tok (min 1.4020, max 1.5041); 47.8 tok/s; power 66.9 W; VRAM 3693 MiB; CPU 29%; trace/counter 0.988
+idle GPU power: empty 22.0 W, model loaded 29.9 W
+[qwen3.5-4b/Q4_K_M ngl=99 pp] median 0.0528 J/tok (min 0.0515, max 0.0537); 1264.2 tok/s; power 65.4 W; VRAM 3343 MiB; CPU 29%; trace/counter 0.989
+[qwen3.5-4b/Q4_K_M ngl=99 tg] median 1.3864 J/tok (min 1.3024, max 1.3972); 50.5 tok/s; power 65.9 W; VRAM 3343 MiB; CPU 29%; trace/counter 0.984
+idle GPU power: empty 22.0 W, model loaded 29.6 W
+[qwen3.5-4b/Q3_K_M ngl=99 pp] median 0.0563 J/tok (min 0.0555, max 0.0571); 1185.2 tok/s; power 65.3 W; VRAM 2917 MiB; CPU 29%; trace/counter 0.991
+[qwen3.5-4b/Q3_K_M ngl=99 tg] median 1.4996 J/tok (min 1.4322, max 1.5291); 46.4 tok/s; power 66.7 W; VRAM 2917 MiB; CPU 29%; trace/counter 0.990
+idle GPU power: empty 19.0 W, model loaded 29.5 W
+[qwen3.5-4b/Q2_K ngl=99 pp] median 0.0651 J/tok (min 0.0640, max 0.0662); 1025.8 tok/s; power 64.8 W; VRAM 2587 MiB; CPU 28%; trace/counter 0.980
+[qwen3.5-4b/Q2_K ngl=99 tg] median 1.3891 J/tok (min 1.3330, max 1.3905); 50.1 tok/s; power 65.6 W; VRAM 2587 MiB; CPU 29%; trace/counter 0.981
+idle GPU power: empty 31.0 W, model loaded 29.9 W
