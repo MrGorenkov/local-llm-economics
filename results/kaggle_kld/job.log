@@ -1,0 +1,38 @@
+[      0s] $ curl -sL --retry 5 -o /tmp/job/src/qwen3.5-0.8b-bf16.gguf https://huggingface.co/bartowski/Qwen_Qwen3.5-0.8B-GGUF/resolve/main/Qwen_Qwen3.5-0.8B-bf16.gguf
+[      0s] $ git clone --depth 1 --branch b11136 https://github.com/ggml-org/llama.cpp /tmp/job/llama.cpp
+[      5s] libcuda: /usr/local/nvidia/lib64/libcuda.so
+[      5s] $ cmake -S /tmp/job/llama.cpp -B /tmp/job/build -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=75 -DCMAKE_BUILD_TYPE=Release -DLLAMA_CURL=OFF -DLLAMA_OPENSSL=OFF -DCUDA_cuda_driver_LIBRARY=/usr/local/nvidia/lib64/libcuda.so
+[     12s] $ cmake --build /tmp/job/build -j 4 --target llama-server llama-perplexity llama-quantize llama-bench
+[     12s] downloaded qwen3.5-0.8b-bf16.gguf: 1.45 GiB
+[     12s] $ curl -sL --retry 5 -o /tmp/job/src/qwen3.5-2b-bf16.gguf https://huggingface.co/bartowski/Qwen_Qwen3.5-2B-GGUF/resolve/main/Qwen_Qwen3.5-2B-bf16.gguf
+[    175s] downloaded qwen3.5-2b-bf16.gguf: 3.63 GiB
+[    175s] $ curl -sL --retry 5 -o /tmp/job/src/qwen3.5-4b-bf16.gguf https://huggingface.co/bartowski/Qwen_Qwen3.5-4B-GGUF/resolve/main/Qwen_Qwen3.5-4B-bf16.gguf
+[    601s] downloaded qwen3.5-4b-bf16.gguf: 8.07 GiB
+[   1590s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-F16.gguf F16
+[   1601s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q8_0.gguf Q8_0
+[   1607s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q6_K.gguf Q6_K
+[   1624s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q5_K_M.gguf Q5_K_M
+[   1651s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q4_K_M.gguf Q4_K_M
+[   1683s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q3_K_M.gguf Q3_K_M
+[   1704s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-0.8b-bf16.gguf /tmp/job/q/qwen3.5-0.8b/qwen3.5-0.8b-Q2_K.gguf Q2_K
+[   1731s] quantized qwen3.5-0.8b: qwen3.5-0.8b-F16.gguf 1.45G, qwen3.5-0.8b-Q2_K.gguf 0.40G, qwen3.5-0.8b-Q3_K_M.gguf 0.44G, qwen3.5-0.8b-Q4_K_M.gguf 0.50G, qwen3.5-0.8b-Q5_K_M.gguf 0.55G, qwen3.5-0.8b-Q6_K.gguf 0.60G, qwen3.5-0.8b-Q8_0.gguf 0.78G
+[   1731s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-F16.gguf F16
+[   1759s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q8_0.gguf Q8_0
+[   1770s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q6_K.gguf Q6_K
+[   1811s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q5_K_M.gguf Q5_K_M
+[   1879s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q4_K_M.gguf Q4_K_M
+[   1961s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q3_K_M.gguf Q3_K_M
+[   2011s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-2b-bf16.gguf /tmp/job/q/qwen3.5-2b/qwen3.5-2b-Q2_K.gguf Q2_K
+[   2075s] quantized qwen3.5-2b: qwen3.5-2b-F16.gguf 3.63G, qwen3.5-2b-Q2_K.gguf 0.92G, qwen3.5-2b-Q3_K_M.gguf 1.05G, qwen3.5-2b-Q4_K_M.gguf 1.22G, qwen3.5-2b-Q5_K_M.gguf 1.35G, qwen3.5-2b-Q6_K.gguf 1.50G, qwen3.5-2b-Q8_0.gguf 1.93G
+[   2075s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-F16.gguf F16
+[   2130s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q8_0.gguf Q8_0
+[   2176s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q6_K.gguf Q6_K
+[   2273s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q5_K_M.gguf Q5_K_M
+[   2432s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q4_K_M.gguf Q4_K_M
+[   2619s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q3_K_M.gguf Q3_K_M
+[   2727s] $ /tmp/job/build/bin/llama-quantize /tmp/job/src/qwen3.5-4b-bf16.gguf /tmp/job/q/qwen3.5-4b/qwen3.5-4b-Q2_K.gguf Q2_K
+[   2873s] quantized qwen3.5-4b: qwen3.5-4b-F16.gguf 8.07G, qwen3.5-4b-Q2_K.gguf 1.82G, qwen3.5-4b-Q3_K_M.gguf 2.16G, qwen3.5-4b-Q4_K_M.gguf 2.59G, qwen3.5-4b-Q5_K_M.gguf 2.94G, qwen3.5-4b-Q6_K.gguf 3.32G, qwen3.5-4b-Q8_0.gguf 4.29G
+[   3648s] GPU1: aligned KLD of qwen3.5-0.8b finished
+[   4310s] GPU0: aligned KLD of qwen3.5-4b finished
+[   4564s] GPU1: aligned KLD of qwen3.5-2b finished
+[   4564s] done

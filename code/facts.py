@@ -54,19 +54,36 @@ def main():
     out["trace_counter_ratio_t4"] = {"min": min(rr), "max": max(rr), "mean": sum(rr) / len(rr)}
     out["t4_idle_w"] = med([v["idle"] for v in t4s.values()])
 
-    # quality: KLD ratio ru/en
-    out["kld_ru_over_en"] = {}
-    for m in ("qwen3.5-0.8b", "qwen3.5-2b", "qwen3.5-4b"):
-        q = [json.loads(l) for l in (R / f"quality_{m}.jsonl").read_text(encoding="utf-8").splitlines()]
-        k = {(r["quant"], r["lang"]): r for r in q if r["metric"] == "ppl_kld"}
-        p = {(r["quant"], r["lang"]): r for r in q if r["metric"] in ("ppl", "ppl_kld")}
-        out["kld_ru_over_en"][m] = {qq: k[(qq, "ru")]["mean_kld"] / k[(qq, "en")]["mean_kld"]
-                                    for qq in ("Q8_0", "Q6_K", "Q5_K_M", "Q4_K_M", "Q3_K_M", "Q2_K")}
-        out.setdefault("ppl_increase_pct", {})[m] = {
-            f"{qq}_{lang}": 100 * (p[(qq, lang)]["ppl"] / p[("F16", lang)]["ppl"] - 1)
-            for qq in ("Q4_K_M", "Q3_K_M", "Q2_K") for lang in ("ru", "en")}
+    # quality: KL ratio ru/en on the sentence-aligned text (same 1000 sentence pairs in both languages).
+    # 95 % interval of the ratio by the delta method from the per-token standard errors reported by
+    # llama-perplexity, treating the two languages as independent.
+    out["kld_ru_over_en"], out["kld_ratio_ci"], out["kld_per_sentence_ratio"] = {}, {}, {}
     tok = json.loads((R / "tokenization.json").read_text())
     out["tokens_ru_over_en"] = tok["ru_en_token_ratio"]
+    n_ru, n_en = 33438, 26236  # tokens of data/ppl_{ru,en}_aligned.txt with the Qwen3.5 tokenizer
+    out["aligned_tokens"] = {"ru": n_ru, "en": n_en, "ratio": n_ru / n_en}
+    ratios = []
+    for m in ("qwen3.5-0.8b", "qwen3.5-2b", "qwen3.5-4b"):
+        q = [json.loads(l) for l in (R / f"quality_aligned_{m}.jsonl").read_text(encoding="utf-8").splitlines()]
+        k = {(r["quant"], r["lang"]): r for r in q if r["metric"] == "ppl_kld"}
+        p = {(r["quant"], r["lang"]): r for r in q if r["metric"] in ("ppl", "ppl_kld")}
+        for qq in ("Q8_0", "Q6_K", "Q5_K_M", "Q4_K_M", "Q3_K_M", "Q2_K"):
+            a, b = k[(qq, "ru")], k[(qq, "en")]
+            r = a["mean_kld"] / b["mean_kld"]
+            se = r * ((a["mean_kld_se"] / a["mean_kld"]) ** 2 + (b["mean_kld_se"] / b["mean_kld"]) ** 2) ** 0.5
+            ratios.append(r)
+            out["kld_ru_over_en"].setdefault(m, {})[qq] = r
+            out["kld_ratio_ci"].setdefault(m, {})[qq] = [r - 1.96 * se, r + 1.96 * se]
+            out["kld_per_sentence_ratio"].setdefault(m, {})[qq] = r * n_ru / n_en
+            out.setdefault("top1_mismatch_ru_minus_en", {}).setdefault(m, {})[qq] = b["same_top_p"] - a["same_top_p"]
+        out.setdefault("ppl_increase_pct", {})[m] = {
+            f"{qq}_{lang}": 100 * (p[(qq, lang)]["ppl"] / p[("F16", lang)]["ppl"] - 1)
+            for qq in ("Q8_0", "Q6_K", "Q5_K_M", "Q4_K_M", "Q3_K_M", "Q2_K") for lang in ("ru", "en")}
+    n_up = sum(r > 1 for r in ratios)
+    from math import comb
+    p_sign = min(1.0, 2 * sum(comb(len(ratios), i) for i in range(n_up, len(ratios) + 1)) / 2 ** len(ratios))
+    out["kld_ratio_summary"] = {"n": len(ratios), "ru_higher": n_up, "min": min(ratios), "max": max(ratios),
+                                "sign_test_p": p_sign}
     (R / "facts.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
     print(json.dumps(out, indent=1))
 

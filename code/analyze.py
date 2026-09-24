@@ -269,9 +269,11 @@ def main():
     fit_ngl = {k: v.get("fit_ngl") for k, v in placement.items()}
     fig_energy(tab, placement)
     fig_cliff(tab, fit_ngl)
+    # fidelity (perplexity, KL) from the sentence-aligned ru/en text, accuracy from the main quality run
     qrows = []
     for m in MODELS:
-        qrows += jl(f"quality_{m}.jsonl")
+        qrows += [r for r in jl(f"quality_{m}.jsonl") if r["metric"] == "mmlu"]
+        qrows += jl(f"quality_aligned_{m}.jsonl")
     if qrows:
         fig_quality(qrows)
         if (RES / "tco.jsonl").exists():
